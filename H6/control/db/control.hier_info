@@ -1,0 +1,20 @@
+|counter
+Q3 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst.ACLR
+Reset => inst1.ACLR
+Reset => inst2.ACLR
+Reset => inst3.ACLR
+IsMul => inst9.IN0
+IsMul => inst3.IN1
+IsMul => inst11.IN1
+IsMul => inst14.IN0
+IsMul => inst18.IN0
+CLK => inst3.CLK
+CLK => inst2.CLK
+CLK => inst1.CLK
+CLK => inst.CLK
+Q2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
