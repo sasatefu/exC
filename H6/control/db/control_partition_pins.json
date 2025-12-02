@@ -4,6 +4,30 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "IsMul",
+					"strict" : false
+				},
+				{
+					"name" : "AND1_out",
+					"strict" : false
+				},
+				{
+					"name" : "AND2_out",
+					"strict" : false
+				},
+				{
+					"name" : "MUX",
+					"strict" : false
+				},
+				{
+					"name" : "A_RW",
+					"strict" : false
+				},
+				{
+					"name" : "Q_RW",
+					"strict" : false
+				},
+				{
 					"name" : "Q3",
 					"strict" : false
 				},
@@ -20,15 +44,39 @@
 					"strict" : false
 				},
 				{
-					"name" : "IsMul",
+					"name" : "ALU[4]",
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "ALU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW1",
+					"strict" : false
+				},
+				{
+					"name" : "SW3",
+					"strict" : false
+				},
+				{
+					"name" : "SW2",
+					"strict" : false
+				},
+				{
+					"name" : "Q_LSB",
 					"strict" : false
 				},
 				{
 					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
 					"strict" : false
 				}
 			]
