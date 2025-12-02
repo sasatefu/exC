@@ -1,5 +1,5 @@
 Analysis & Synthesis report for control
-Tue Dec 02 15:53:05 2025
+Tue Dec 02 16:57:08 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -43,16 +43,16 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 02 15:53:05 2025                     ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 02 16:57:08 2025                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; control                                                   ;
 ; Top-level Entity Name              ; control                                                   ;
 ; Family                             ; Cyclone IV E                                              ;
-; Total logic elements               ; 42                                                        ;
-;     Total combinational functions  ; 38                                                        ;
-;     Dedicated logic registers      ; 24                                                        ;
-; Total registers                    ; 24                                                        ;
-; Total pins                         ; 29                                                        ;
+; Total logic elements               ; 11                                                        ;
+;     Total combinational functions  ; 11                                                        ;
+;     Dedicated logic registers      ; 4                                                         ;
+; Total registers                    ; 4                                                         ;
+; Total pins                         ; 28                                                        ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0                                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                                         ;
@@ -163,73 +163,72 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path            ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
-; mux.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/mux.bdf               ;         ;
-; a_rw.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/a_rw.bdf              ;         ;
-; q_rw.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/q_rw.bdf              ;         ;
-; control_shifta.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/control_shifta.bdf    ;         ;
-; and_one.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/and_one.bdf           ;         ;
-; and_two.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/and_two.bdf           ;         ;
-; control_alu.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/control_alu.bdf       ;         ;
-; out.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/out.bdf               ;         ;
-; control.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/control.bdf           ;         ;
-; contorol_IsMul.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/contorol_IsMul.bdf    ;         ;
-; counter.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/counter.bdf           ;         ;
-; chatter.vhd                      ; yes             ; Auto-Found VHDL File               ; c:/exc/librarys/alu/chatter/chatter.vhd ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path         ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------+---------+
+; mux.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/mux.bdf            ;         ;
+; a_rw.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/a_rw.bdf           ;         ;
+; q_rw.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/q_rw.bdf           ;         ;
+; control_shifta.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/control_shifta.bdf ;         ;
+; and_one.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/and_one.bdf        ;         ;
+; and_two.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/and_two.bdf        ;         ;
+; control_alu.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/control_alu.bdf    ;         ;
+; out.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/out.bdf            ;         ;
+; control.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/control.bdf        ;         ;
+; contorol_IsMul.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/contorol_IsMul.bdf ;         ;
+; counter.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/exC/H6/control/counter.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 42             ;
-;                                             ;                ;
-; Total combinational functions               ; 38             ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 9              ;
-;     -- 3 input functions                    ; 7              ;
-;     -- <=2 input functions                  ; 22             ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 23             ;
-;     -- arithmetic mode                      ; 15             ;
-;                                             ;                ;
-; Total registers                             ; 24             ;
-;     -- Dedicated logic registers            ; 24             ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 29             ;
-;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 20             ;
-; Total fan-out                               ; 197            ;
-; Average fan-out                             ; 1.64           ;
-+---------------------------------------------+----------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 11        ;
+;                                             ;           ;
+; Total combinational functions               ; 11        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 3         ;
+;     -- 3 input functions                    ; 8         ;
+;     -- <=2 input functions                  ; 0         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 11        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 4         ;
+;     -- Dedicated logic registers            ; 4         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 28        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; SW1~input ;
+; Maximum fan-out                             ; 7         ;
+; Total fan-out                               ; 88        ;
+; Average fan-out                             ; 1.24      ;
++---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
-; |control                        ; 38 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |control                                      ; control     ; work         ;
-;    |CHATTER:inst8|              ; 28 (28)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|CHATTER:inst8                        ; CHATTER     ; work         ;
-;    |counter:inst|               ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|counter:inst                         ; counter     ; work         ;
-;    |out:out_inst|               ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:out_inst                         ; out         ; work         ;
-;       |a_rw:a|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:out_inst|a_rw:a                  ; a_rw        ; work         ;
-;       |and_one:and_one|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:out_inst|and_one:and_one         ; and_one     ; work         ;
-;       |control_alu:control_alu| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:out_inst|control_alu:control_alu ; control_alu ; work         ;
-;       |mux:mux_inst|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:out_inst|mux:mux_inst            ; mux         ; work         ;
-;       |q_rw:q|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:out_inst|q_rw:q                  ; q_rw        ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+-------------+--------------+
+; |control                        ; 11 (0)              ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |control                                   ; control     ; work         ;
+;    |counter:inst|               ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|counter:inst                      ; counter     ; work         ;
+;    |out:inst5|                  ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:inst5                         ; out         ; work         ;
+;       |a_rw:a|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:inst5|a_rw:a                  ; a_rw        ; work         ;
+;       |and_one:inst|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:inst5|and_one:inst            ; and_one     ; work         ;
+;       |and_two:and_two|         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:inst5|and_two:and_two         ; and_two     ; work         ;
+;       |control_alu:control_alu| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:inst5|control_alu:control_alu ; control_alu ; work         ;
+;       |mux:mux_inst|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:inst5|mux:mux_inst            ; mux         ; work         ;
+;       |q_rw:q|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |control|out:inst5|q_rw:q                  ; q_rw        ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -238,12 +237,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 24    ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -253,23 +252,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 29                          ;
-; cycloneiii_ff         ; 24                          ;
+; boundary_port         ; 28                          ;
+; cycloneiii_ff         ; 4                           ;
 ;     CLR               ; 4                           ;
-;     ENA               ; 4                           ;
-;     plain             ; 16                          ;
-; cycloneiii_lcell_comb ; 40                          ;
-;     arith             ; 15                          ;
-;         2 data inputs ; 15                          ;
-;     normal            ; 25                          ;
+; cycloneiii_lcell_comb ; 13                          ;
+;     normal            ; 13                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 9                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 3                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 2.37                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.30                        ;
 +-----------------------+-----------------------------+
 
 
@@ -288,7 +281,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Tue Dec 02 15:52:58 2025
+    Info: Processing started: Tue Dec 02 16:57:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off control -c control
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -319,21 +312,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file contoro
 Info (12021): Found 1 design units, including 1 entities, in source file counter.bdf
     Info (12023): Found entity 1: counter
 Info (12127): Elaborating entity "control" for the top level hierarchy
-Warning (275011): Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
 Info (12128): Elaborating entity "contorol_IsMul" for hierarchy "contorol_IsMul:ismul_inst"
-Info (12128): Elaborating entity "out" for hierarchy "out:out_inst"
-Info (12128): Elaborating entity "mux" for hierarchy "out:out_inst|mux:mux_inst"
-Info (12128): Elaborating entity "a_rw" for hierarchy "out:out_inst|a_rw:a"
-Info (12128): Elaborating entity "q_rw" for hierarchy "out:out_inst|q_rw:q"
-Info (12128): Elaborating entity "and_two" for hierarchy "out:out_inst|and_two:and_two"
-Info (12128): Elaborating entity "and_one" for hierarchy "out:out_inst|and_one:and_one"
-Info (12128): Elaborating entity "control_alu" for hierarchy "out:out_inst|control_alu:control_alu"
-Info (12128): Elaborating entity "control_shifta" for hierarchy "out:out_inst|control_shifta:control_shifta"
+Info (12128): Elaborating entity "out" for hierarchy "out:inst5"
+Info (12128): Elaborating entity "mux" for hierarchy "out:inst5|mux:mux_inst"
+Info (12128): Elaborating entity "a_rw" for hierarchy "out:inst5|a_rw:a"
+Info (12128): Elaborating entity "q_rw" for hierarchy "out:inst5|q_rw:q"
+Info (12128): Elaborating entity "and_two" for hierarchy "out:inst5|and_two:and_two"
+Info (12128): Elaborating entity "and_one" for hierarchy "out:inst5|and_one:inst"
+Info (12128): Elaborating entity "control_alu" for hierarchy "out:inst5|control_alu:control_alu"
+Info (12128): Elaborating entity "control_shifta" for hierarchy "out:inst5|control_shifta:control_shifta"
 Info (12128): Elaborating entity "counter" for hierarchy "counter:inst"
-Warning (12125): Using design file /exc/librarys/alu/chatter/chatter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: CHATTER-RTL File: c:/exc/librarys/alu/chatter/chatter.vhd Line: 9
-    Info (12023): Found entity 1: CHATTER File: c:/exc/librarys/alu/chatter/chatter.vhd Line: 4
-Info (12128): Elaborating entity "CHATTER" for hierarchy "CHATTER:inst8"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ALU[3]" is stuck at VCC
     Warning (13410): Pin "ALU[2]" is stuck at GND
@@ -348,14 +336,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+Info (21057): Implemented 39 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 42 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Tue Dec 02 15:53:05 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:17
+    Info (21061): Implemented 11 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Tue Dec 02 16:57:08 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 

@@ -3,7 +3,7 @@ $comment
 		vcd file control.msim.vcd -direction
 $end
 $date
-	Tue Dec 02 14:06:58 2025
+	Tue Dec 02 16:59:11 2025
 $end
 $version
 	ModelSim Version 2020.1
@@ -12,40 +12,86 @@ $timescale
 	1ps
 $end
 
-$scope module counter_vlg_vec_tst $end
+$scope module control_vlg_vec_tst $end
 $var reg 1 ! CLK $end
-$var reg 1 " IsMul $end
+$var reg 1 " Q_LSB $end
 $var reg 1 # Reset $end
-$var wire 1 $ Q0 $end
-$var wire 1 % Q1 $end
-$var wire 1 & Q2 $end
-$var wire 1 ' Q3 $end
+$var reg 1 $ SW1 $end
+$var reg 1 % SW2 $end
+$var reg 1 & SW3 $end
+$var wire 1 ' A_RW $end
+$var wire 1 ( ALU [4] $end
+$var wire 1 ) ALU [3] $end
+$var wire 1 * ALU [2] $end
+$var wire 1 + ALU [1] $end
+$var wire 1 , ALU [0] $end
+$var wire 1 - AND1_out $end
+$var wire 1 . AND2_out $end
+$var wire 1 / IsMul $end
+$var wire 1 0 MUX $end
+$var wire 1 1 Q0 $end
+$var wire 1 2 Q1 $end
+$var wire 1 3 Q2 $end
+$var wire 1 4 Q3 $end
+$var wire 1 5 Q_RW $end
+$var wire 1 6 SF [6] $end
+$var wire 1 7 SF [5] $end
+$var wire 1 8 SF [4] $end
+$var wire 1 9 SF [3] $end
+$var wire 1 : SF [2] $end
+$var wire 1 ; SF [1] $end
+$var wire 1 < SF [0] $end
 
 $scope module i1 $end
-$var wire 1 ( gnd $end
-$var wire 1 ) vcc $end
-$var wire 1 * unknown $end
-$var tri1 1 + devclrn $end
-$var tri1 1 , devpor $end
-$var tri1 1 - devoe $end
-$var wire 1 . Q3~output_o $end
-$var wire 1 / Q2~output_o $end
-$var wire 1 0 Q1~output_o $end
-$var wire 1 1 Q0~output_o $end
-$var wire 1 2 CLK~input_o $end
-$var wire 1 3 CLK~inputclkctrl_outclk $end
-$var wire 1 4 IsMul~input_o $end
-$var wire 1 5 inst3~0_combout $end
-$var wire 1 6 Reset~input_o $end
-$var wire 1 7 Reset~inputclkctrl_outclk $end
-$var wire 1 8 inst3~q $end
-$var wire 1 9 inst2~0_combout $end
-$var wire 1 : inst2~q $end
-$var wire 1 ; inst1~0_combout $end
-$var wire 1 < inst1~q $end
-$var wire 1 = inst~0_combout $end
-$var wire 1 > inst~1_combout $end
-$var wire 1 ? inst~q $end
+$var wire 1 = gnd $end
+$var wire 1 > vcc $end
+$var wire 1 ? unknown $end
+$var tri1 1 @ devclrn $end
+$var tri1 1 A devpor $end
+$var tri1 1 B devoe $end
+$var wire 1 C IsMul~output_o $end
+$var wire 1 D AND1_out~output_o $end
+$var wire 1 E AND2_out~output_o $end
+$var wire 1 F MUX~output_o $end
+$var wire 1 G A_RW~output_o $end
+$var wire 1 H Q_RW~output_o $end
+$var wire 1 I Q3~output_o $end
+$var wire 1 J Q2~output_o $end
+$var wire 1 K Q1~output_o $end
+$var wire 1 L Q0~output_o $end
+$var wire 1 M ALU[4]~output_o $end
+$var wire 1 N ALU[3]~output_o $end
+$var wire 1 O ALU[2]~output_o $end
+$var wire 1 P ALU[1]~output_o $end
+$var wire 1 Q ALU[0]~output_o $end
+$var wire 1 R SF[6]~output_o $end
+$var wire 1 S SF[5]~output_o $end
+$var wire 1 T SF[4]~output_o $end
+$var wire 1 U SF[3]~output_o $end
+$var wire 1 V SF[2]~output_o $end
+$var wire 1 W SF[1]~output_o $end
+$var wire 1 X SF[0]~output_o $end
+$var wire 1 Y SW3~input_o $end
+$var wire 1 Z SW2~input_o $end
+$var wire 1 [ SW1~input_o $end
+$var wire 1 \ inst5|mux_inst|inst~combout $end
+$var wire 1 ] Q_LSB~input_o $end
+$var wire 1 ^ inst5|inst|inst2~combout $end
+$var wire 1 _ inst5|and_two|and2~0_combout $end
+$var wire 1 ` inst5|a|inst4~0_combout $end
+$var wire 1 a inst5|q|inst6~0_combout $end
+$var wire 1 b CLK~input_o $end
+$var wire 1 c inst|inst3~0_combout $end
+$var wire 1 d Reset~input_o $end
+$var wire 1 e inst|inst3~q $end
+$var wire 1 f inst|inst2~0_combout $end
+$var wire 1 g inst|inst2~q $end
+$var wire 1 h inst|inst1~0_combout $end
+$var wire 1 i inst|inst1~q $end
+$var wire 1 j inst|inst~0_combout $end
+$var wire 1 k inst|inst~1_combout $end
+$var wire 1 l inst|inst~q $end
+$var wire 1 m inst5|control_alu|inst~combout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -54,652 +100,321 @@ $dumpvars
 0!
 0"
 1#
-0$
-0%
-0&
+1$
+1%
+1&
 0'
-0(
-1)
-x*
-1+
 1,
-1-
-0.
-0/
-00
+0+
+0*
+1)
+0(
+0-
+1.
+1/
+10
 01
 02
 03
 04
 05
-16
-17
-08
-09
-0:
-0;
 0<
+1;
+1:
+09
+08
+07
+16
 0=
-0>
-0?
+1>
+x?
+1@
+1A
+1B
+1C
+0D
+1E
+1F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+1N
+0O
+0P
+1Q
+1R
+0S
+0T
+0U
+1V
+1W
+0X
+1Y
+1Z
+1[
+1\
+0]
+0^
+1_
+0`
+0a
+0b
+1c
+1d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
 $end
-#10000
-1!
-12
-13
-#20000
-0!
-02
-03
 #30000
 1!
-12
-13
-#40000
-0!
-02
-03
-#50000
-1!
-12
-13
+1b
+1e
+1L
+11
+1f
+0c
 #60000
 0!
-02
-03
-#70000
-1!
-12
-13
-#80000
-0!
-02
-03
+0b
 #90000
 1!
+1b
+1g
+0e
+0L
+1K
 12
-13
-#100000
-0!
-02
-03
-#110000
-1!
-12
-13
+01
+1c
 #120000
 0!
-02
-03
-#130000
-1!
-12
-13
-#140000
-0!
-02
-03
+0b
 #150000
 1!
-12
-13
-#160000
-0!
-02
-03
-#170000
-1!
-12
-13
+1b
+1e
+1L
+11
+1h
+0f
+0c
 #180000
 0!
-02
-03
-#190000
-1!
-12
-13
-#200000
-0!
-02
-03
+0b
 #210000
 1!
-12
+1b
+1i
+0g
+0e
+0L
+0K
+1J
 13
-#220000
-0!
 02
-03
-#230000
-1!
-12
-13
+01
+1c
 #240000
 0!
-02
-03
-#250000
-1!
-12
-13
-#260000
-0!
-02
-03
+0b
 #270000
 1!
-12
-13
-#280000
-0!
-02
-03
-#290000
-1!
-12
-13
+1b
+1e
+1L
+11
+1f
+0c
 #300000
 0!
-02
-03
-#310000
-1!
-12
-13
-#320000
-0!
-02
-03
+0b
 #330000
 1!
+1b
+1g
+0e
+0L
+1K
 12
-13
-#340000
-0!
-02
-03
-#350000
-1!
-12
-13
+01
+1c
 #360000
 0!
-02
-03
-#370000
-1!
-12
-13
-#380000
-0!
-02
-03
+0b
 #390000
 1!
-12
-13
-#400000
-0!
-02
-03
-#410000
-1!
-12
-13
+1b
+1e
+1L
+1j
+11
+0h
+0f
+0c
+1k
 #420000
 0!
-02
-03
-#430000
-1!
-12
-13
-#440000
-1"
-0!
-14
-02
-03
-15
+0b
 #450000
 1!
-12
-13
-18
-11
-1$
-19
-05
-#460000
-0!
-02
+1b
+1l
+0i
+0g
+0e
+0L
+0K
+0J
+1I
+0j
+14
 03
-#470000
-1!
-12
-13
-1:
-08
+02
 01
-10
-1%
-0$
-15
+0k
+1c
+1k
 #480000
+1"
 0!
-02
-03
-#490000
-1!
-12
-13
-18
-11
-1$
-1;
-09
-05
-#500000
-0!
-02
-03
+1]
+0b
+1^
+1D
+1-
 #510000
 1!
-12
-13
-1<
-0:
-08
-01
-00
-1/
-1&
-0%
-0$
-15
-#520000
-0!
-02
-03
-#530000
-1!
-12
-13
-18
+1b
+1e
+1L
 11
-1$
-19
-05
+1f
+0c
 #540000
 0!
-02
-03
-#550000
-1!
-12
-13
-1:
-08
-01
-10
-1%
-0$
-15
-#560000
-0!
-02
-03
+0b
 #570000
 1!
+1b
+1g
+0e
+0L
+1K
 12
-13
-18
-11
-1=
-1$
-0;
-09
-05
-1>
-#580000
-0!
-02
-03
-#590000
-1!
-12
-13
-1?
-0<
-0:
-08
 01
-00
-0/
-1.
-0=
-1'
-0&
-0%
-0$
-0>
-15
-1>
+1c
 #600000
 0!
-02
-03
-#610000
-1!
-12
-13
-18
-11
-1$
-19
-05
-#620000
-0!
-02
-03
+0b
 #630000
 1!
-12
-13
-1:
-08
-01
-10
-1%
-0$
-15
-#640000
-0!
-02
-03
-#650000
-1!
-12
-13
-18
+1b
+1e
+1L
 11
-1$
-1;
-09
-05
+1h
+0f
+0c
 #660000
 0!
-02
-03
-#670000
-1!
-12
-13
-1<
-0:
-08
-01
-00
-1/
-1&
-0%
-0$
-15
-#680000
-0!
-02
-03
+0b
 #690000
 1!
-12
+1b
+1i
+0g
+0e
+0L
+0K
+1J
 13
-18
-11
-1$
-19
-05
-#700000
-0!
 02
-03
-#710000
-1!
-12
-13
-1:
-08
 01
-10
-1%
-0$
-15
+1c
 #720000
 0!
-02
-03
-#730000
-1!
-12
-13
-18
-11
-1=
-1$
-0;
-09
-05
-0>
-#740000
-0!
-02
-03
+0b
 #750000
 1!
-12
-13
-0?
-0<
-0:
-08
-01
-00
-0/
-0.
-0=
-0'
-0&
-0%
-0$
-1>
-15
-0>
-#760000
-0!
-02
-03
-#770000
-1!
-12
-13
-18
+1b
+1e
+1L
 11
-1$
-19
-05
+1f
+0c
 #780000
 0!
-02
-03
-#790000
-1!
-12
-13
-1:
-08
-01
-10
-1%
-0$
-15
-#800000
-0!
-02
-03
+0b
 #810000
 1!
+1b
+1g
+0e
+0L
+1K
 12
-13
-18
-11
-1$
-1;
-09
-05
-#820000
-0!
-02
-03
-#830000
-1!
-12
-13
-1<
-0:
-08
 01
-00
-1/
-1&
-0%
-0$
-15
+1c
 #840000
 0!
-02
-03
-#850000
-1!
-12
-13
-18
-11
-1$
-19
-05
-#860000
-0!
-02
-03
+0b
 #870000
 1!
-12
-13
-1:
-08
-01
-10
-1%
-0$
-15
-#880000
-0!
-02
-03
-#890000
-1!
-12
-13
-18
+1b
+1e
+1L
+1j
 11
-1=
-1$
-0;
-09
-05
-1>
+0h
+0f
+0c
+0k
 #900000
 0!
-02
-03
-#910000
-1!
-12
-13
-1?
-0<
-0:
-08
-01
-00
-0/
-1.
-0=
-1'
-0&
-0%
-0$
-0>
-15
-1>
-#920000
-0!
-02
-03
+0b
 #930000
 1!
-12
-13
-18
-11
-1$
-19
-05
-#940000
-0!
-02
+1b
+0l
+0i
+0g
+0e
+0L
+0K
+0J
+0I
+0j
+04
 03
-#950000
-1!
-12
-13
-1:
-08
+02
 01
-10
-1%
-0$
-15
+1k
+1c
+0k
 #960000
+0"
 0!
-02
-03
-#970000
-1!
-12
-13
-18
-11
-1$
-1;
-09
-05
-#980000
-0!
-02
-03
+0]
+0b
+0^
+0D
+0-
 #990000
 1!
-12
-13
-1<
-0:
-08
-01
-00
-1/
-1&
-0%
-0$
-15
+1b
+1e
+1L
+11
+1f
+0c
 #1000000
