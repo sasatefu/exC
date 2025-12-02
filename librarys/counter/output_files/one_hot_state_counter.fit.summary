@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Oct 31 06:57:29 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+Revision Name : one_hot_state_counter
+Top-level Entity Name : OHSC_interface_two
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 128 / 114,480 ( < 1 % )
+    Total combinational functions : 127 / 114,480 ( < 1 % )
+    Dedicated logic registers : 65 / 114,480 ( < 1 % )
+Total registers : 65
+Total pins : 40 / 529 ( 8 % )
+Total virtual pins : 0
+Total memory bits : 45 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

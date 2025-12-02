@@ -1,0 +1,65 @@
+|7SEGLED
+7SEGLED[0] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+7SEGLED[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+7SEGLED[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+7SEGLED[3] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+7SEGLED[4] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+7SEGLED[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+7SEGLED[6] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+input[0] => ex1_1:inst.D
+input[1] => ex1_1:inst.C
+input[2] => ex1_1:inst.B
+input[3] => ex1_1:inst.A
+
+
+|7SEGLED|ex1_1:inst
+Zero <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+B => inst29.IN0
+B => inst35.IN0
+B => inst33.IN1
+B => inst53.IN1
+B => inst63.IN0
+B => inst61.IN0
+B => inst3.IN1
+B => inst70.IN1
+B => inst87.IN1
+D => inst26.IN0
+D => inst34.IN1
+D => inst48.IN1
+D => inst47.IN1
+D => inst54.IN1
+D => inst50.IN1
+D => inst62.IN1
+D => inst60.IN1
+D => inst91.IN1
+C => inst35.IN1
+C => inst27.IN0
+C => inst.IN1
+C => inst44.IN1
+C => inst63.IN1
+C => inst59.IN1
+C => inst2.IN1
+C => inst72.IN1
+C => inst71.IN0
+C => inst94.IN1
+C => inst90.IN0
+A => inst28.IN0
+A => inst31.IN0
+A => inst30.IN0
+A => inst45.IN0
+A => inst55.IN0
+A => inst56.IN0
+A => inst3.IN0
+A => inst2.IN0
+A => inst72.IN0
+A => inst70.IN0
+A => inst91.IN0
+A => inst89.IN0
+One <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+Two <= inst42.DB_MAX_OUTPUT_PORT_TYPE
+Three <= inst68.DB_MAX_OUTPUT_PORT_TYPE
+Five <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Four <= inst75.DB_MAX_OUTPUT_PORT_TYPE
+Six <= inst96.DB_MAX_OUTPUT_PORT_TYPE
+
+

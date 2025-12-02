@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CHATTER:instaaaa|CHATT[0]'
+Slack : -7.405
+TNS   : -79.315
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_Y2'
+Slack : -2.250
+TNS   : -29.725
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_Y2'
+Slack : 0.465
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CHATTER:instaaaa|CHATT[0]'
+Slack : 1.024
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_Y2'
+Slack : -3.000
+TNS   : -28.700
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CHATTER:instaaaa|CHATT[0]'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 0C Model Setup 'CHATTER:instaaaa|CHATT[0]'
+Slack : -6.776
+TNS   : -72.203
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_Y2'
+Slack : -1.962
+TNS   : -24.970
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_Y2'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CHATTER:instaaaa|CHATT[0]'
+Slack : 0.934
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_Y2'
+Slack : -3.000
+TNS   : -28.700
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CHATTER:instaaaa|CHATT[0]'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Fast 1200mV 0C Model Setup 'CHATTER:instaaaa|CHATT[0]'
+Slack : -3.041
+TNS   : -29.932
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_Y2'
+Slack : -0.612
+TNS   : -5.483
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_Y2'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CHATTER:instaaaa|CHATT[0]'
+Slack : 0.464
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_Y2'
+Slack : -3.000
+TNS   : -24.054
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CHATTER:instaaaa|CHATT[0]'
+Slack : -1.000
+TNS   : -16.000
+
+------------------------------------------------------------

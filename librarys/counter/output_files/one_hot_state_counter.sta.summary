@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_50'
+Slack : -3.379
+TNS   : -175.791
+
+Type  : Slow 1200mV 85C Model Setup 'GEN1KHz:inst1256|o'
+Slack : 0.086
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_50'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GEN1KHz:inst1256|o'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_50'
+Slack : -3.000
+TNS   : -129.859
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GEN1KHz:inst1256|o'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_50'
+Slack : -3.008
+TNS   : -151.978
+
+Type  : Slow 1200mV 0C Model Setup 'GEN1KHz:inst1256|o'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_50'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GEN1KHz:inst1256|o'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_50'
+Slack : -3.000
+TNS   : -129.067
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GEN1KHz:inst1256|o'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_50'
+Slack : -1.221
+TNS   : -47.591
+
+Type  : Fast 1200mV 0C Model Setup 'GEN1KHz:inst1256|o'
+Slack : 0.549
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_50'
+Slack : 0.154
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GEN1KHz:inst1256|o'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_50'
+Slack : -3.000
+TNS   : -89.662
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GEN1KHz:inst1256|o'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

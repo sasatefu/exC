@@ -1,0 +1,151 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+# Date created = 14:02:29  October 03, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		exone_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY tbRegSixteen
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "20.1.1 SP1.02I"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:02:29  OCTOBER 03, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 SP1.02i Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name BDF_FILE exone.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name BDF_FILE output_files/oneBitRegister.bdf
+set_global_assignment -name VERILOG_FILE regSixteen.v
+set_global_assignment -name VERILOG_FILE tbRegSixteen.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tbRegSixteen -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME tbRegSixteen -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tbRegSixteen
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tbRegSixteen -section_id tbRegSixteen
+set_global_assignment -name EDA_TEST_BENCH_FILE tbRegSixteen.v -section_id tbRegSixteen
+set_global_assignment -name EDA_TEST_BENCH_FILE regSixteen.v -section_id tbRegSixteen
+set_global_assignment -name VERILOG_FILE Top.v
+set_location_assignment PIN_Y23 -to RwIn
+set_location_assignment PIN_R24 -to Clk
+set_location_assignment PIN_N21 -to Clr
+set_location_assignment PIN_Y24 -to EaIn
+set_location_assignment PIN_G19 -to LedD[0]
+set_location_assignment PIN_F19 -to LedD[1]
+set_location_assignment PIN_E19 -to LedD[2]
+set_location_assignment PIN_F21 -to LedD[3]
+set_location_assignment PIN_F18 -to LedD[4]
+set_location_assignment PIN_E18 -to LedD[5]
+set_location_assignment PIN_J19 -to LedD[6]
+set_location_assignment PIN_H19 -to LedD[7]
+set_location_assignment PIN_J17 -to LedD[8]
+set_location_assignment PIN_G17 -to LedD[9]
+set_location_assignment PIN_J15 -to LedD[10]
+set_location_assignment PIN_H16 -to LedD[11]
+set_location_assignment PIN_J16 -to LedD[12]
+set_location_assignment PIN_H17 -to LedD[13]
+set_location_assignment PIN_F15 -to LedD[14]
+set_location_assignment PIN_G15 -to LedD[15]
+set_location_assignment PIN_G18 -to Q[0]
+set_location_assignment PIN_F22 -to Q[1]
+set_location_assignment PIN_E17 -to Q[2]
+set_location_assignment PIN_L26 -to Q[3]
+set_location_assignment PIN_M24 -to Q[4]
+set_location_assignment PIN_Y22 -to Q[5]
+set_location_assignment PIN_W21 -to Q[6]
+set_location_assignment PIN_W22 -to Q[7]
+set_location_assignment PIN_AA25 -to Q[8]
+set_location_assignment PIN_AA26 -to Q[9]
+set_location_assignment PIN_Y25 -to Q[10]
+set_location_assignment PIN_W26 -to Q[11]
+set_location_assignment PIN_V21 -to Q[12]
+set_location_assignment PIN_U21 -to Q[13]
+set_location_assignment PIN_AB20 -to Q[14]
+set_location_assignment PIN_AA21 -to Q[15]
+set_location_assignment PIN_AB19 -to Qa[0]
+set_location_assignment PIN_AA19 -to Qa[1]
+set_location_assignment PIN_AG21 -to Qa[2]
+set_location_assignment PIN_AH21 -to Qa[3]
+set_location_assignment PIN_AD18 -to Qa[4]
+set_location_assignment PIN_AC18 -to Qa[5]
+set_location_assignment PIN_AB18 -to Qa[6]
+set_location_assignment PIN_AH19 -to Qa[7]
+set_location_assignment PIN_AA17 -to Qa[8]
+set_location_assignment PIN_AB16 -to Qa[9]
+set_location_assignment PIN_AA16 -to Qa[10]
+set_location_assignment PIN_AB17 -to Qa[11]
+set_location_assignment PIN_AD17 -to Qa[12]
+set_location_assignment PIN_AE17 -to Qa[13]
+set_location_assignment PIN_AG17 -to Qa[14]
+set_location_assignment PIN_AH17 -to Qa[15]
+set_location_assignment PIN_H15 -to LedCtrl[2]
+set_location_assignment PIN_G16 -to LedCtrl[3]
+set_location_assignment PIN_F17 -to LedCtrl[1]
+set_location_assignment PIN_G21 -to LedCtrl[0]
+set_location_assignment PIN_AB28 -to DIn[0]
+set_location_assignment PIN_AC28 -to DIn[1]
+set_location_assignment PIN_AC27 -to DIn[2]
+set_location_assignment PIN_AD27 -to DIn[3]
+set_location_assignment PIN_AB27 -to DIn[4]
+set_location_assignment PIN_AC26 -to DIn[5]
+set_location_assignment PIN_AD26 -to DIn[6]
+set_location_assignment PIN_AB26 -to DIn[7]
+set_location_assignment PIN_AC25 -to DIn[8]
+set_location_assignment PIN_AB25 -to DIn[9]
+set_location_assignment PIN_AC24 -to DIn[10]
+set_location_assignment PIN_AB24 -to DIn[11]
+set_location_assignment PIN_AB23 -to DIn[12]
+set_location_assignment PIN_AA24 -to DIn[13]
+set_location_assignment PIN_AA23 -to DIn[14]
+set_location_assignment PIN_AA22 -to DIn[15]
+set_global_assignment -name VERILOG_FILE WLI.v
+set_global_assignment -name VERILOG_FILE TopWLI.v
+set_global_assignment -name VERILOG_FILE regOld.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

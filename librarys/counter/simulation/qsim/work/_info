@@ -1,0 +1,176 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/work/Exp_two/simulation/qsim
+vhard_block
+Z1 !s110 1761858202
+!i10b 1
+!s100 0@Lko0WhZ@SDMD?@[@HXo0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Iii0`cM18aS>hLlYH0dd0?0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1761858201
+Z5 8one_hot_state_counter.vo
+Z6 Fone_hot_state_counter.vo
+!i122 118
+L0 417 34
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1761858202.000000
+Z9 !s107 one_hot_state_counter.vo|
+Z10 !s90 -work|work|one_hot_state_counter.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vOHSC_interface
+Z13 !s110 1761284304
+!i10b 1
+!s100 Tc?lo:mzk>o7k0_hP640N0
+R2
+IjS_Cl2lf`S:eo<[o4gTOV2
+R3
+R0
+w1761284303
+R5
+R6
+!i122 98
+L0 32 4745
+R7
+r1
+!s85 0
+31
+Z14 !s108 1761284304.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@o@h@s@c_interface
+vOHSC_interface_two
+Z15 !s110 1761757332
+!i10b 1
+!s100 b2A=JeBK@A=D_8`8AbKAk1
+R2
+I0GbdQ38?T]n[7elFAKdF>3
+R3
+R0
+w1761757326
+R5
+R6
+!i122 110
+L0 32 4620
+R7
+r1
+!s85 0
+31
+Z16 !s108 1761757332.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@o@h@s@c_interface_two
+vOHSC_interface_two_vlg_vec_tst
+R15
+!i10b 1
+!s100 2@HHR0gg^5@I`GKG<cE>W0
+R2
+I<j7c=Vb]nN7<9jS@hU[7D1
+R3
+R0
+w1761757325
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 111
+L0 30 107
+R7
+r1
+!s85 0
+31
+R16
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+n@o@h@s@c_interface_two_vlg_vec_tst
+vOHSC_interface_vlg_vec_tst
+R13
+!i10b 1
+!s100 F:nf^99ehjVGD2j31:JAV0
+R2
+IP6f[h0^WLzWoLmh;ca]071
+R3
+R0
+w1761284302
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
+!i122 99
+L0 30 119
+R7
+r1
+!s85 0
+31
+R14
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
+!i113 1
+R11
+R12
+n@o@h@s@c_interface_vlg_vec_tst
+vone_hot_state_counter
+R1
+!i10b 1
+!s100 lm1>DmjVF9a:9VIAdKX;N2
+R2
+I^IIIe<k7VPgV8m5L@;bQ71
+R3
+R0
+R4
+R5
+R6
+!i122 118
+L0 32 384
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vone_hot_state_counter_vlg_vec_tst
+R1
+!i10b 1
+!s100 2MM]X7O6X4YWH:0?9;1HA3
+R2
+IeQYZ7Hg1AOF3CH=`NZ:o[2
+R3
+R0
+w1761858200
+8Waveform6.vwf.vt
+FWaveform6.vwf.vt
+!i122 119
+L0 30 51
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform6.vwf.vt|
+!s90 -work|work|Waveform6.vwf.vt|
+!i113 1
+R11
+R12

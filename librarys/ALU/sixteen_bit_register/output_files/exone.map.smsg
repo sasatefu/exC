@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at regSixteen.v(7): object "Q" differs only in case from object "q" in the same scope File: C:/work/Exp_four/sixteen_bit_register/regSixteen.v Line: 7
+Info (10281): Verilog HDL Declaration information at regOld.v(7): object "Q" differs only in case from object "q" in the same scope File: C:/work/Exp_four/sixteen_bit_register/regOld.v Line: 7

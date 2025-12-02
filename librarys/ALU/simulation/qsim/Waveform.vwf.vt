@@ -1,0 +1,376 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/02/2025 14:11:37"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          ALU
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module ALU_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg a0_in;
+reg a1_in;
+reg a2_in;
+reg a3_in;
+reg a4_in;
+reg a5_in;
+reg a6_in;
+reg a7_in;
+reg a8_in;
+reg a9_in;
+reg aa_in;
+reg ab_in;
+reg ac_in;
+reg ad_in;
+reg ae_in;
+reg af_in;
+reg b0_in;
+reg b1_in;
+reg b2_in;
+reg b3_in;
+reg b4_in;
+reg b5_in;
+reg b6_in;
+reg b7_in;
+reg b8_in;
+reg b9_in;
+reg ba_in;
+reg bb_in;
+reg bc_in;
+reg bd_in;
+reg be_in;
+reg bf_in;
+reg u_in;
+reg v_in;
+reg x_in;
+reg y_in;
+reg z_in;
+// wires                                               
+wire cf_out;
+wire g0_out;
+wire g1_out;
+wire g2_out;
+wire g3_out;
+wire g4_out;
+wire g5_out;
+wire g6_out;
+wire g7_out;
+wire g8_out;
+wire g9_out;
+wire ga_out;
+wire gb_out;
+wire gc_out;
+wire gd_out;
+wire ge_out;
+wire gf_out;
+wire overflow;
+
+// assign statements (if any)                          
+ALU i1 (
+// port map - connection between master ports and signals/registers   
+	.a0_in(a0_in),
+	.a1_in(a1_in),
+	.a2_in(a2_in),
+	.a3_in(a3_in),
+	.a4_in(a4_in),
+	.a5_in(a5_in),
+	.a6_in(a6_in),
+	.a7_in(a7_in),
+	.a8_in(a8_in),
+	.a9_in(a9_in),
+	.aa_in(aa_in),
+	.ab_in(ab_in),
+	.ac_in(ac_in),
+	.ad_in(ad_in),
+	.ae_in(ae_in),
+	.af_in(af_in),
+	.b0_in(b0_in),
+	.b1_in(b1_in),
+	.b2_in(b2_in),
+	.b3_in(b3_in),
+	.b4_in(b4_in),
+	.b5_in(b5_in),
+	.b6_in(b6_in),
+	.b7_in(b7_in),
+	.b8_in(b8_in),
+	.b9_in(b9_in),
+	.ba_in(ba_in),
+	.bb_in(bb_in),
+	.bc_in(bc_in),
+	.bd_in(bd_in),
+	.be_in(be_in),
+	.bf_in(bf_in),
+	.cf_out(cf_out),
+	.g0_out(g0_out),
+	.g1_out(g1_out),
+	.g2_out(g2_out),
+	.g3_out(g3_out),
+	.g4_out(g4_out),
+	.g5_out(g5_out),
+	.g6_out(g6_out),
+	.g7_out(g7_out),
+	.g8_out(g8_out),
+	.g9_out(g9_out),
+	.ga_out(ga_out),
+	.gb_out(gb_out),
+	.gc_out(gc_out),
+	.gd_out(gd_out),
+	.ge_out(ge_out),
+	.gf_out(gf_out),
+	.overflow(overflow),
+	.u_in(u_in),
+	.v_in(v_in),
+	.x_in(x_in),
+	.y_in(y_in),
+	.z_in(z_in)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// x_in
+initial
+begin
+	x_in = 1'b0;
+end 
+
+// y_in
+initial
+begin
+	y_in = 1'b1;
+end 
+
+// z_in
+initial
+begin
+	z_in = 1'bX;
+end 
+
+// u_in
+initial
+begin
+	u_in = 1'b0;
+end 
+
+// v_in
+initial
+begin
+	v_in = 1'b1;
+end 
+
+// a0_in
+initial
+begin
+	a0_in = 1'b0;
+end 
+
+// a1_in
+initial
+begin
+	a1_in = 1'b0;
+end 
+
+// a2_in
+initial
+begin
+	a2_in = 1'b0;
+end 
+
+// a3_in
+initial
+begin
+	a3_in = 1'b0;
+end 
+
+// a4_in
+initial
+begin
+	a4_in = 1'b0;
+end 
+
+// a5_in
+initial
+begin
+	a5_in = 1'b0;
+end 
+
+// a6_in
+initial
+begin
+	a6_in = 1'b0;
+end 
+
+// a7_in
+initial
+begin
+	a7_in = 1'b0;
+end 
+
+// a8_in
+initial
+begin
+	a8_in = 1'b0;
+end 
+
+// a9_in
+initial
+begin
+	a9_in = 1'b0;
+end 
+
+// aa_in
+initial
+begin
+	aa_in = 1'b0;
+end 
+
+// ab_in
+initial
+begin
+	ab_in = 1'b0;
+end 
+
+// ac_in
+initial
+begin
+	ac_in = 1'b0;
+end 
+
+// ad_in
+initial
+begin
+	ad_in = 1'b0;
+end 
+
+// ae_in
+initial
+begin
+	ae_in = 1'b1;
+end 
+
+// af_in
+initial
+begin
+	af_in = 1'b1;
+end 
+
+// b0_in
+initial
+begin
+	b0_in = 1'b0;
+end 
+
+// b1_in
+initial
+begin
+	b1_in = 1'b0;
+end 
+
+// b2_in
+initial
+begin
+	b2_in = 1'b0;
+end 
+
+// b3_in
+initial
+begin
+	b3_in = 1'b0;
+end 
+
+// b4_in
+initial
+begin
+	b4_in = 1'b0;
+end 
+
+// b5_in
+initial
+begin
+	b5_in = 1'b0;
+end 
+
+// b6_in
+initial
+begin
+	b6_in = 1'b0;
+end 
+
+// b7_in
+initial
+begin
+	b7_in = 1'b0;
+end 
+
+// b8_in
+initial
+begin
+	b8_in = 1'b0;
+end 
+
+// b9_in
+initial
+begin
+	b9_in = 1'b0;
+end 
+
+// ba_in
+initial
+begin
+	ba_in = 1'b0;
+end 
+
+// bb_in
+initial
+begin
+	bb_in = 1'b0;
+end 
+
+// bc_in
+initial
+begin
+	bc_in = 1'b0;
+end 
+
+// bd_in
+initial
+begin
+	bd_in = 1'b0;
+end 
+
+// be_in
+initial
+begin
+	be_in = 1'b0;
+end 
+
+// bf_in
+initial
+begin
+	bf_in = 1'b1;
+end 
+endmodule
+

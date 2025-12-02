@@ -1,0 +1,169 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Q3_cur_out",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_cur_out",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_cur_out",
+					"strict" : false
+				},
+				{
+					"name" : "Q0_cur_out",
+					"strict" : false
+				},
+				{
+					"name" : "Q3_next_out",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_next_out",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_next_out",
+					"strict" : false
+				},
+				{
+					"name" : "Q0_next_out",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_out",
+					"strict" : false
+				},
+				{
+					"name" : "CLR_out",
+					"strict" : false
+				},
+				{
+					"name" : "a3_out",
+					"strict" : false
+				},
+				{
+					"name" : "b3_out",
+					"strict" : false
+				},
+				{
+					"name" : "c3_out",
+					"strict" : false
+				},
+				{
+					"name" : "d3_out",
+					"strict" : false
+				},
+				{
+					"name" : "e3_out",
+					"strict" : false
+				},
+				{
+					"name" : "f3_out",
+					"strict" : false
+				},
+				{
+					"name" : "g3_out",
+					"strict" : false
+				},
+				{
+					"name" : "a2_out",
+					"strict" : false
+				},
+				{
+					"name" : "b2_out",
+					"strict" : false
+				},
+				{
+					"name" : "c2_out",
+					"strict" : false
+				},
+				{
+					"name" : "d2_out",
+					"strict" : false
+				},
+				{
+					"name" : "e2_out",
+					"strict" : false
+				},
+				{
+					"name" : "f2_out",
+					"strict" : false
+				},
+				{
+					"name" : "g2_out",
+					"strict" : false
+				},
+				{
+					"name" : "a1_out",
+					"strict" : false
+				},
+				{
+					"name" : "b1_out",
+					"strict" : false
+				},
+				{
+					"name" : "c1_out",
+					"strict" : false
+				},
+				{
+					"name" : "d1_out",
+					"strict" : false
+				},
+				{
+					"name" : "f1_out",
+					"strict" : false
+				},
+				{
+					"name" : "g1_out",
+					"strict" : false
+				},
+				{
+					"name" : "a0_out",
+					"strict" : false
+				},
+				{
+					"name" : "b0_out",
+					"strict" : false
+				},
+				{
+					"name" : "c0_out",
+					"strict" : false
+				},
+				{
+					"name" : "d0_out",
+					"strict" : false
+				},
+				{
+					"name" : "e0_out",
+					"strict" : false
+				},
+				{
+					"name" : "f0_out",
+					"strict" : false
+				},
+				{
+					"name" : "g0_out",
+					"strict" : false
+				},
+				{
+					"name" : "e1_out",
+					"strict" : false
+				},
+				{
+					"name" : "CLR_in",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

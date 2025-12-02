@@ -1,0 +1,143 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/24/2025 17:02:29"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          OHSC_interface_two
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module OHSC_interface_two_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK_50;
+reg CLR_in;
+// wires                                               
+wire a0_out;
+wire a1_out;
+wire a2_out;
+wire a3_out;
+wire b0_out;
+wire b1_out;
+wire b2_out;
+wire b3_out;
+wire c0_out;
+wire c1_out;
+wire c2_out;
+wire c3_out;
+wire CLK_out;
+wire CLR_out;
+wire d0_out;
+wire d1_out;
+wire d2_out;
+wire d3_out;
+wire e0_out;
+wire e1_out;
+wire e2_out;
+wire e3_out;
+wire f0_out;
+wire f1_out;
+wire f2_out;
+wire f3_out;
+wire g0_out;
+wire g1_out;
+wire g2_out;
+wire g3_out;
+wire Q0_cur_out;
+wire Q0_next_out;
+wire Q1_cur_out;
+wire Q1_next_out;
+wire Q2_cur_out;
+wire Q2_next_out;
+wire Q3_cur_out;
+wire Q3_next_out;
+
+// assign statements (if any)                          
+OHSC_interface_two i1 (
+// port map - connection between master ports and signals/registers   
+	.a0_out(a0_out),
+	.a1_out(a1_out),
+	.a2_out(a2_out),
+	.a3_out(a3_out),
+	.b0_out(b0_out),
+	.b1_out(b1_out),
+	.b2_out(b2_out),
+	.b3_out(b3_out),
+	.c0_out(c0_out),
+	.c1_out(c1_out),
+	.c2_out(c2_out),
+	.c3_out(c3_out),
+	.CLK_50(CLK_50),
+	.CLK_out(CLK_out),
+	.CLR_in(CLR_in),
+	.CLR_out(CLR_out),
+	.d0_out(d0_out),
+	.d1_out(d1_out),
+	.d2_out(d2_out),
+	.d3_out(d3_out),
+	.e0_out(e0_out),
+	.e1_out(e1_out),
+	.e2_out(e2_out),
+	.e3_out(e3_out),
+	.f0_out(f0_out),
+	.f1_out(f1_out),
+	.f2_out(f2_out),
+	.f3_out(f3_out),
+	.g0_out(g0_out),
+	.g1_out(g1_out),
+	.g2_out(g2_out),
+	.g3_out(g3_out),
+	.Q0_cur_out(Q0_cur_out),
+	.Q0_next_out(Q0_next_out),
+	.Q1_cur_out(Q1_cur_out),
+	.Q1_next_out(Q1_next_out),
+	.Q2_cur_out(Q2_cur_out),
+	.Q2_next_out(Q2_next_out),
+	.Q3_cur_out(Q3_cur_out),
+	.Q3_next_out(Q3_next_out)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// CLK_50
+initial
+begin
+	repeat(12)
+	begin
+		CLK_50 = 1'b0;
+		CLK_50 = #40000 1'b1;
+		# 40000;
+	end
+	CLK_50 = 1'b0;
+end 
+
+// CLR_in
+initial
+begin
+	CLR_in = 1'b0;
+	CLR_in = #40000 1'b1;
+end 
+endmodule
+

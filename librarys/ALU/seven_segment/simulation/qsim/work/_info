@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/work/Exp_one/simulation/qsim
+vhard_block
+Z1 !s110 1760656275
+!i10b 1
+!s100 T>UoDC9]B<:F3Y2CcAI;a3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IeEn`AbZ[VFhZH9?ZeVD`i3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1760656274
+Z5 8sevenSegments.vo
+Z6 FsevenSegments.vo
+!i122 23
+L0 372 34
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1760656275.000000
+Z9 !s107 sevenSegments.vo|
+Z10 !s90 -work|work|sevenSegments.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vsevenSegments
+R1
+!i10b 1
+!s100 _Rb:H[Vz>;S2Y3^[`X5Rn1
+R2
+ICO3Z5:7iEG@c?B<JLPWO@2
+R3
+R0
+R4
+R5
+R6
+!i122 23
+L0 32 339
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+nseven@segments
+vsevenSegments_vlg_vec_tst
+R1
+!i10b 1
+!s100 U^zn>_<eG@9fG;WcE78[L2
+R2
+I3Ph]z:KMYcBmzB62DBYZL0
+R3
+R0
+w1760656273
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 24
+L0 30 81
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+nseven@segments_vlg_vec_tst

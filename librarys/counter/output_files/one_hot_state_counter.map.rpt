@@ -1,0 +1,456 @@
+Analysis & Synthesis report for one_hot_state_counter
+Fri Oct 31 06:56:56 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for COUNTER500ms:inst4|altshift_taps:counter_rtl_0|shift_taps_onm:auto_generated|altsyncram_1l31:altsyncram4
+ 15. Parameter Settings for Inferred Entity Instance: COUNTER500ms:inst4|altshift_taps:counter_rtl_0
+ 16. altshift_taps Parameter Settings by Entity Instance
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                   ;
++------------------------------------+-----------------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Oct 31 06:56:56 2025                     ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
+; Revision Name                      ; one_hot_state_counter                                     ;
+; Top-level Entity Name              ; OHSC_interface_two                                        ;
+; Family                             ; Cyclone IV E                                              ;
+; Total logic elements               ; 128                                                       ;
+;     Total combinational functions  ; 127                                                       ;
+;     Dedicated logic registers      ; 65                                                        ;
+; Total registers                    ; 65                                                        ;
+; Total pins                         ; 40                                                        ;
+; Total virtual pins                 ; 0                                                         ;
+; Total memory bits                  ; 45                                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                                         ;
+; Total PLLs                         ; 0                                                         ;
++------------------------------------+-----------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                 ;
++------------------------------------------------------------------+--------------------+-----------------------+
+; Option                                                           ; Setting            ; Default Value         ;
++------------------------------------------------------------------+--------------------+-----------------------+
+; Device                                                           ; EP4CE115F29C7      ;                       ;
+; Top-level entity name                                            ; OHSC_interface_two ; one_hot_state_counter ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V             ;
+; Use smart compilation                                            ; Off                ; Off                   ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                    ;
+; Enable compact report table                                      ; Off                ; Off                   ;
+; Restructure Multiplexers                                         ; Auto               ; Auto                  ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                   ;
+; Preserve fewer node names                                        ; On                 ; On                    ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable                ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001          ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993             ;
+; State Machine Processing                                         ; Auto               ; Auto                  ;
+; Safe State Machine                                               ; Off                ; Off                   ;
+; Extract Verilog State Machines                                   ; On                 ; On                    ;
+; Extract VHDL State Machines                                      ; On                 ; On                    ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                   ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000                  ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                   ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                    ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                    ;
+; Parallel Synthesis                                               ; On                 ; On                    ;
+; DSP Block Balancing                                              ; Auto               ; Auto                  ;
+; NOT Gate Push-Back                                               ; On                 ; On                    ;
+; Power-Up Don't Care                                              ; On                 ; On                    ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                   ;
+; Remove Duplicate Registers                                       ; On                 ; On                    ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                   ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                   ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                   ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                   ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                   ;
+; Ignore SOFT Buffers                                              ; On                 ; On                    ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                   ;
+; Optimization Technique                                           ; Balanced           ; Balanced              ;
+; Carry Chain Length                                               ; 70                 ; 70                    ;
+; Auto Carry Chains                                                ; On                 ; On                    ;
+; Auto Open-Drain Pins                                             ; On                 ; On                    ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                   ;
+; Auto ROM Replacement                                             ; On                 ; On                    ;
+; Auto RAM Replacement                                             ; On                 ; On                    ;
+; Auto DSP Block Replacement                                       ; On                 ; On                    ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto                  ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto                  ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                    ;
+; Strict RAM Replacement                                           ; Off                ; Off                   ;
+; Allow Synchronous Control Signals                                ; On                 ; On                    ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                   ;
+; Auto RAM Block Balancing                                         ; On                 ; On                    ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                   ;
+; Auto Resource Sharing                                            ; Off                ; Off                   ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                   ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                   ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                   ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                    ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                   ;
+; Timing-Driven Synthesis                                          ; On                 ; On                    ;
+; Report Parameter Settings                                        ; On                 ; On                    ;
+; Report Source Assignments                                        ; On                 ; On                    ;
+; Report Connectivity Checks                                       ; On                 ; On                    ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                   ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                     ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation    ;
+; HDL message level                                                ; Level2             ; Level2                ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                   ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000                  ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000                  ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                   ;
+; Clock MUX Protection                                             ; On                 ; On                    ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                   ;
+; Block Design Naming                                              ; Auto               ; Auto                  ;
+; SDC constraint protection                                        ; Off                ; Off                   ;
+; Synthesis Effort                                                 ; Auto               ; Auto                  ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                    ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                   ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium                ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto                  ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                    ;
++------------------------------------------------------------------+--------------------+-----------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------+---------+
+; one_hot_state_counter.bdf        ; yes             ; User Block Diagram/Schematic File        ; C:/work/Exp_two/one_hot_state_counter.bdf                                ;         ;
+; OHSC_interface_two.bdf           ; yes             ; User Block Diagram/Schematic File        ; C:/work/Exp_two/OHSC_interface_two.bdf                                   ;         ;
+; gen1khz.vhd                      ; yes             ; Auto-Found VHDL File                     ; c:/work/exp_two/gen1khz/gen1khz.vhd                                      ;         ;
+; sevensegments.bdf                ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/work/Exp_two/sevensegments.bdf                                        ;         ;
+; counter500ms.vhd                 ; yes             ; Auto-Found VHDL File                     ; c:/work/exp_two/counter500ms/counter500ms.vhd                            ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift_taps.tdf ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc      ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
+; db/shift_taps_onm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/work/Exp_two/db/shift_taps_onm.tdf                                    ;         ;
+; db/altsyncram_1l31.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/work/Exp_two/db/altsyncram_1l31.tdf                                   ;         ;
+; db/add_sub_24e.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/work/Exp_two/db/add_sub_24e.tdf                                       ;         ;
+; db/cntr_6pf.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/work/Exp_two/db/cntr_6pf.tdf                                          ;         ;
+; db/cmpr_ogc.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/work/Exp_two/db/cmpr_ogc.tdf                                          ;         ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 128          ;
+;                                             ;              ;
+; Total combinational functions               ; 127          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 44           ;
+;     -- 3 input functions                    ; 15           ;
+;     -- <=2 input functions                  ; 68           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 73           ;
+;     -- arithmetic mode                      ; 54           ;
+;                                             ;              ;
+; Total registers                             ; 65           ;
+;     -- Dedicated logic registers            ; 65           ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 40           ;
+; Total memory bits                           ; 45           ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; CLK_50~input ;
+; Maximum fan-out                             ; 76           ;
+; Total fan-out                               ; 701          ;
+; Average fan-out                             ; 2.44         ;
++---------------------------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                        ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Entity Name           ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |OHSC_interface_two                       ; 127 (0)             ; 65 (0)                    ; 45          ; 0            ; 0       ; 0         ; 40   ; 0            ; |OHSC_interface_two                                                                                                          ; OHSC_interface_two    ; work         ;
+;    |COUNTER500ms:inst4|                   ; 70 (63)             ; 45 (41)                   ; 45          ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|COUNTER500ms:inst4                                                                                       ; COUNTER500ms          ; work         ;
+;       |altshift_taps:counter_rtl_0|       ; 7 (0)               ; 4 (0)                     ; 45          ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|COUNTER500ms:inst4|altshift_taps:counter_rtl_0                                                           ; altshift_taps         ; work         ;
+;          |shift_taps_onm:auto_generated|  ; 7 (2)               ; 4 (2)                     ; 45          ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|COUNTER500ms:inst4|altshift_taps:counter_rtl_0|shift_taps_onm:auto_generated                             ; shift_taps_onm        ; work         ;
+;             |altsyncram_1l31:altsyncram4| ; 0 (0)               ; 0 (0)                     ; 45          ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|COUNTER500ms:inst4|altshift_taps:counter_rtl_0|shift_taps_onm:auto_generated|altsyncram_1l31:altsyncram4 ; altsyncram_1l31       ; work         ;
+;             |cntr_6pf:cntr1|              ; 5 (5)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|COUNTER500ms:inst4|altshift_taps:counter_rtl_0|shift_taps_onm:auto_generated|cntr_6pf:cntr1              ; cntr_6pf              ; work         ;
+;    |GEN1KHz:inst1256|                     ; 26 (26)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|GEN1KHz:inst1256                                                                                         ; GEN1KHz               ; work         ;
+;    |one_hot_state_counter:OHSC|           ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|one_hot_state_counter:OHSC                                                                               ; one_hot_state_counter ; work         ;
+;    |sevenSegments:HEX0|                   ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|sevenSegments:HEX0                                                                                       ; sevenSegments         ; work         ;
+;    |sevenSegments:HEX1|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|sevenSegments:HEX1                                                                                       ; sevenSegments         ; work         ;
+;    |sevenSegments:HEX2|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|sevenSegments:HEX2                                                                                       ; sevenSegments         ; work         ;
+;    |sevenSegments:HEX3|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |OHSC_interface_two|sevenSegments:HEX3                                                                                       ; sevenSegments         ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                        ;
++---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; COUNTER500ms:inst4|altshift_taps:counter_rtl_0|shift_taps_onm:auto_generated|altsyncram_1l31:altsyncram4|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 3            ; 15           ; 3            ; 15           ; 45   ; None ;
++---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; COUNTER500ms:inst4|count[0]           ; Stuck at GND due to stuck port data_in ;
+; COUNTER500ms:inst4|counter[0][15]     ; Lost fanout                            ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 65    ;
+; Number of registers using Synchronous Clear  ; 15    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 19    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; one_hot_state_counter:OHSC|JKFF0       ; 4       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                         ;
++--------------------------------------+----------------------------------+------------+
+; Register Name                        ; Megafunction                     ; Type       ;
++--------------------------------------+----------------------------------+------------+
+; COUNTER500ms:inst4|count[1..15]      ; COUNTER500ms:inst4|counter_rtl_0 ; SHIFT_TAPS ;
+; COUNTER500ms:inst4|tmp[0..14]        ; COUNTER500ms:inst4|counter_rtl_0 ; SHIFT_TAPS ;
+; COUNTER500ms:inst4|counter[1][0..14] ; COUNTER500ms:inst4|counter_rtl_0 ; SHIFT_TAPS ;
++--------------------------------------+----------------------------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |OHSC_interface_two|COUNTER500ms:inst4|counter[0][13] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for COUNTER500ms:inst4|altshift_taps:counter_rtl_0|shift_taps_onm:auto_generated|altsyncram_1l31:altsyncram4 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: COUNTER500ms:inst4|altshift_taps:counter_rtl_0 ;
++----------------+----------------+---------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                          ;
++----------------+----------------+---------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                       ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                       ;
+; TAP_DISTANCE   ; 3              ; Untyped                                                       ;
+; WIDTH          ; 15             ; Untyped                                                       ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                       ;
+; CBXI_PARAMETER ; shift_taps_onm ; Untyped                                                       ;
++----------------+----------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance                         ;
++----------------------------+------------------------------------------------+
+; Name                       ; Value                                          ;
++----------------------------+------------------------------------------------+
+; Number of entity instances ; 1                                              ;
+; Entity Instance            ; COUNTER500ms:inst4|altshift_taps:counter_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                              ;
+;     -- TAP_DISTANCE        ; 3                                              ;
+;     -- WIDTH               ; 15                                             ;
++----------------------------+------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 40                          ;
+; cycloneiii_ff         ; 65                          ;
+;     CLR               ; 4                           ;
+;     ENA               ; 4                           ;
+;     ENA SCLR          ; 15                          ;
+;     plain             ; 42                          ;
+; cycloneiii_lcell_comb ; 156                         ;
+;     arith             ; 54                          ;
+;         2 data inputs ; 54                          ;
+;     normal            ; 102                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 34                          ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 44                          ;
+; cycloneiii_ram_block  ; 15                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.40                        ;
+; Average LUT depth     ; 2.62                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+    Info: Processing started: Fri Oct 31 06:56:34 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off one_hot_state_counter -c one_hot_state_counter
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file one_hot_state_counter.bdf
+    Info (12023): Found entity 1: one_hot_state_counter
+Info (12021): Found 1 design units, including 1 entities, in source file ohsc_interface.bdf
+    Info (12023): Found entity 1: OHSC_interface
+Info (12021): Found 1 design units, including 1 entities, in source file ohsc_interface_two.bdf
+    Info (12023): Found entity 1: OHSC_interface_two
+Info (12127): Elaborating entity "OHSC_interface_two" for the top level hierarchy
+Info (12128): Elaborating entity "one_hot_state_counter" for hierarchy "one_hot_state_counter:OHSC"
+Warning (12125): Using design file gen1khz/gen1khz.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: GEN1KHz-RTL File: c:/work/exp_two/gen1khz/gen1khz.vhd Line: 9
+    Info (12023): Found entity 1: GEN1KHz File: c:/work/exp_two/gen1khz/gen1khz.vhd Line: 4
+Info (12128): Elaborating entity "GEN1KHz" for hierarchy "GEN1KHz:inst1256"
+Warning (12125): Using design file sevensegments.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: sevenSegments
+Info (12128): Elaborating entity "sevenSegments" for hierarchy "sevenSegments:HEX3"
+Warning (275011): Block or symbol "XOR" of instance "inst45" overlaps another block or symbol
+Warning (12125): Using design file counter500ms/counter500ms.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: COUNTER500ms-RTL File: c:/work/exp_two/counter500ms/counter500ms.vhd Line: 12
+    Info (12023): Found entity 1: COUNTER500ms File: c:/work/exp_two/counter500ms/counter500ms.vhd Line: 6
+Info (12128): Elaborating entity "COUNTER500ms" for hierarchy "COUNTER500ms:inst4"
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "COUNTER500ms:inst4|counter_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 3
+        Info (286033): Parameter WIDTH set to 15
+Info (12130): Elaborated megafunction instantiation "COUNTER500ms:inst4|altshift_taps:counter_rtl_0"
+Info (12133): Instantiated megafunction "COUNTER500ms:inst4|altshift_taps:counter_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "3"
+    Info (12134): Parameter "WIDTH" = "15"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_onm.tdf
+    Info (12023): Found entity 1: shift_taps_onm File: C:/work/Exp_two/db/shift_taps_onm.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1l31.tdf
+    Info (12023): Found entity 1: altsyncram_1l31 File: C:/work/Exp_two/db/altsyncram_1l31.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_24e.tdf
+    Info (12023): Found entity 1: add_sub_24e File: C:/work/Exp_two/db/add_sub_24e.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_6pf.tdf
+    Info (12023): Found entity 1: cntr_6pf File: C:/work/Exp_two/db/cntr_6pf.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ogc.tdf
+    Info (12023): Found entity 1: cmpr_ogc File: C:/work/Exp_two/db/cmpr_ogc.tdf Line: 23
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 183 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 38 output pins
+    Info (21061): Implemented 128 logic cells
+    Info (21064): Implemented 15 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Fri Oct 31 06:56:56 2025
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:37
+
+

@@ -1,0 +1,37 @@
+module Top (
+    input  wire        Clk,
+    input  wire        Clr,
+    input  wire        RwIn,
+    input  wire        EaIn,
+    input  wire [15:0] D,
+    output wire [15:0] Q,
+    output wire [15:0] Qa,
+    output wire [3:0]  LedCtrl,
+    output wire [15:0] LedD,
+    output wire [15:0] LedQ,
+    output wire [15:0] LedQa
+);
+
+    wire Rw = ~RwIn;
+    wire Ea = ~EaIn;
+
+    regSixteen uut (
+        .CLK(Clk),
+        .CLR(Clr),
+        .R_W(Rw),
+        .Ea(Ea),
+        .D(D),
+        .Q(Q),
+        .Qa(Qa)
+    );
+
+    assign LedCtrl[0] = Clk;
+    assign LedCtrl[1] = Clr;
+    assign LedCtrl[2] = Rw;
+    assign LedCtrl[3] = Ea;
+
+    assign LedD  = D;
+    assign LedQ  = Q;
+    assign LedQa = Qa;
+
+endmodule

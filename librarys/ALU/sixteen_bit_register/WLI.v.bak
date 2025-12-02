@@ -1,0 +1,13 @@
+module WLI (
+    input wire SOne,
+	 input wire STwo,
+	 input wire SThree
+	 output wire OutA
+	 output wire OutB
+	 output wire OutC
+	 output wire OutD
+	 output wire OutE
+	 output wire OutF
+	 output wire OutG
+);
+

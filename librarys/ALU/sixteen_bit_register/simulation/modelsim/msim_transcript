@@ -1,0 +1,61 @@
+# Reading pref.tcl
+# do exone_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/work/ExOne {C:/work/ExOne/regSixteen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:56 on Oct 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/work/ExOne" C:/work/ExOne/regSixteen.v 
+# -- Compiling module regSixteen
+# 
+# Top level modules:
+# 	regSixteen
+# End time: 18:42:56 on Oct 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/work/ExOne {C:/work/ExOne/tbRegSixteen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:57 on Oct 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/work/ExOne" C:/work/ExOne/tbRegSixteen.v 
+# -- Compiling module tbRegSixteen
+# 
+# Top level modules:
+# 	tbRegSixteen
+# End time: 18:42:57 on Oct 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/work/ExOne {C:/work/ExOne/regSixteen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:57 on Oct 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/work/ExOne" C:/work/ExOne/regSixteen.v 
+# -- Compiling module regSixteen
+# 
+# Top level modules:
+# 	regSixteen
+# End time: 18:42:57 on Oct 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tbRegSixteen
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tbRegSixteen 
+# Start time: 18:42:57 on Oct 13,2025
+# Loading work.tbRegSixteen
+# Loading work.regSixteen
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/work/ExOne/tbRegSixteen.v(44)
+#    Time: 165 ns  Iteration: 0  Instance: /tbRegSixteen
+# Break in Module tbRegSixteen at C:/work/ExOne/tbRegSixteen.v line 44
+# End time: 11:16:51 on Oct 14,2025, Elapsed time: 16:33:54
+# Errors: 0, Warnings: 0

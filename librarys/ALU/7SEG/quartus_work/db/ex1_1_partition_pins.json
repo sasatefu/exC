@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "L1",
+					"strict" : false
+				},
+				{
+					"name" : "L2",
+					"strict" : false
+				},
+				{
+					"name" : "L3",
+					"strict" : false
+				},
+				{
+					"name" : "L4",
+					"strict" : false
+				},
+				{
+					"name" : "Q2",
+					"strict" : false
+				},
+				{
+					"name" : "Q1",
+					"strict" : false
+				},
+				{
+					"name" : "Q0",
+					"strict" : false
+				},
+				{
+					"name" : "SW_Reset",
+					"strict" : false
+				},
+				{
+					"name" : "SW_CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

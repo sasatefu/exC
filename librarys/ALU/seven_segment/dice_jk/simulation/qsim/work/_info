@@ -1,0 +1,126 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/work/Exp_one/dice_jk/simulation/qsim
+vdice_jk
+Z1 !s110 1760662066
+!i10b 1
+!s100 7ZiGoLLJY37J4]OPPTE^P1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IG?26A]]G_9JFJUD3?`hCj3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1760662065
+Z5 8dice_jk.vo
+Z6 Fdice_jk.vo
+!i122 30
+L0 32 363
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1760662066.000000
+Z9 !s107 dice_jk.vo|
+Z10 !s90 -work|work|dice_jk.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vdice_jk_interface
+Z13 !s110 1760619699
+!i10b 1
+!s100 JdiAIh`3o9[@=CDNLInLW1
+R2
+IiN_NTMH5Pl=AU3ZaUIRD^3
+R3
+R0
+w1760619698
+R5
+R6
+!i122 26
+L0 32 401
+R7
+r1
+!s85 0
+31
+Z14 !s108 1760619699.000000
+R9
+R10
+!i113 1
+R11
+R12
+vdice_jk_interface_vlg_vec_tst
+R13
+!i10b 1
+!s100 d2G4D>_kf::AWQX[B?KS72
+R2
+I5@^i^@R^BIk8aVb<ak6MZ1
+R3
+R0
+w1760619697
+Z15 8Waveform1.vwf.vt
+Z16 FWaveform1.vwf.vt
+!i122 27
+L0 30 51
+R7
+r1
+!s85 0
+31
+R14
+!s107 Waveform1.vwf.vt|
+Z17 !s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+vdice_jk_vlg_vec_tst
+R1
+!i10b 1
+!s100 <c?4Y=GiXZmE9g4cHEKk_2
+R2
+IQ?6B?H;=azWkMY^<Y[WA80
+R3
+R0
+w1760662064
+R15
+R16
+!i122 31
+L0 30 32
+R7
+r1
+!s85 0
+31
+R8
+Z18 !s107 Waveform1.vwf.vt|
+R17
+!i113 1
+R11
+R12
+vhard_block
+R1
+!i10b 1
+!s100 Fz3FnLYl1F^K3>L@IW@BE0
+R2
+I<nIHSAPC9PmZ45Uen:gPI0
+R3
+R0
+R4
+R5
+R6
+!i122 30
+L0 396 34
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12

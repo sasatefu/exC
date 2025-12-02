@@ -1,0 +1,46 @@
+|sevenSegments
+a_out <= inst05.DB_MAX_OUTPUT_PORT_TYPE
+x3 => inst0A.IN0
+x3 => inst06.IN1
+x3 => inst.IN0
+x3 => inst16.IN0
+x3 => inst24.IN1
+x3 => inst36.IN1
+x3 => inst43.IN1
+x3 => inst45.IN0
+x3 => inst47.IN1
+x3 => inst53.IN1
+x1 => inst3.IN0
+x1 => inst02.IN0
+x1 => inst00.IN0
+x1 => inst16.IN1
+x1 => inst32.IN0
+x1 => inst29.IN0
+x1 => inst40.IN1
+x1 => inst41.IN1
+x1 => inst47.IN0
+x1 => inst63.IN0
+x2 => inst2.IN0
+x2 => inst01.IN0
+x2 => inst00.IN1
+x2 => inst28.IN0
+x2 => inst30.IN0
+x2 => inst40.IN0
+x2 => inst45.IN1
+x2 => inst62.IN0
+x0 => inst4.IN0
+x0 => inst01.IN1
+x0 => inst15.IN0
+x0 => inst27.IN1
+x0 => inst23.IN1
+x0 => inst35.IN0
+x0 => inst29.IN1
+x0 => inst51.IN1
+b_out <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+d_out <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+e_out <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+f_out <= inst49.DB_MAX_OUTPUT_PORT_TYPE
+g_out <= inst61.DB_MAX_OUTPUT_PORT_TYPE
+
+

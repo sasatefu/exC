@@ -1,0 +1,415 @@
+Analysis & Synthesis report for ALU
+Thu Nov 06 17:17:31 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                   ;
++------------------------------------+-----------------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Nov 06 17:17:31 2025                     ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
+; Revision Name                      ; ALU                                                       ;
+; Top-level Entity Name              ; ALU_expLogicCircuit                                       ;
+; Family                             ; Cyclone IV E                                              ;
+; Total logic elements               ; 161                                                       ;
+;     Total combinational functions  ; 157                                                       ;
+;     Dedicated logic registers      ; 36                                                        ;
+; Total registers                    ; 36                                                        ;
+; Total pins                         ; 107                                                       ;
+; Total virtual pins                 ; 0                                                         ;
+; Total memory bits                  ; 0                                                         ;
+; Embedded Multiplier 9-bit elements ; 0                                                         ;
+; Total PLLs                         ; 0                                                         ;
++------------------------------------+-----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                               ;
++------------------------------------------------------------------+---------------------+--------------------+
+; Option                                                           ; Setting             ; Default Value      ;
++------------------------------------------------------------------+---------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7       ;                    ;
+; Top-level entity name                                            ; ALU_expLogicCircuit ; ALU                ;
+; Family name                                                      ; Cyclone IV E        ; Cyclone V          ;
+; Use smart compilation                                            ; Off                 ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                  ; On                 ;
+; Enable compact report table                                      ; Off                 ; Off                ;
+; Restructure Multiplexers                                         ; Auto                ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                 ; Off                ;
+; Preserve fewer node names                                        ; On                  ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable              ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001        ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993           ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto                ; Auto               ;
+; Safe State Machine                                               ; Off                 ; Off                ;
+; Extract Verilog State Machines                                   ; On                  ; On                 ;
+; Extract VHDL State Machines                                      ; On                  ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                 ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000                ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                 ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                  ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                  ; On                 ;
+; Parallel Synthesis                                               ; On                  ; On                 ;
+; DSP Block Balancing                                              ; Auto                ; Auto               ;
+; NOT Gate Push-Back                                               ; On                  ; On                 ;
+; Power-Up Don't Care                                              ; On                  ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                 ; Off                ;
+; Remove Duplicate Registers                                       ; On                  ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                 ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                 ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                 ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                 ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                 ; Off                ;
+; Ignore SOFT Buffers                                              ; On                  ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                 ; Off                ;
+; Optimization Technique                                           ; Balanced            ; Balanced           ;
+; Carry Chain Length                                               ; 70                  ; 70                 ;
+; Auto Carry Chains                                                ; On                  ; On                 ;
+; Auto Open-Drain Pins                                             ; On                  ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                 ; Off                ;
+; Auto ROM Replacement                                             ; On                  ; On                 ;
+; Auto RAM Replacement                                             ; On                  ; On                 ;
+; Auto DSP Block Replacement                                       ; On                  ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto                ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto                ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                  ; On                 ;
+; Strict RAM Replacement                                           ; Off                 ; Off                ;
+; Allow Synchronous Control Signals                                ; On                  ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                 ; Off                ;
+; Auto RAM Block Balancing                                         ; On                  ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                 ; Off                ;
+; Auto Resource Sharing                                            ; Off                 ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                 ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                 ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                 ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                  ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                 ; Off                ;
+; Timing-Driven Synthesis                                          ; On                  ; On                 ;
+; Report Parameter Settings                                        ; On                  ; On                 ;
+; Report Source Assignments                                        ; On                  ; On                 ;
+; Report Connectivity Checks                                       ; On                  ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                 ; Off                ;
+; Synchronization Register Chain Length                            ; 2                   ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation  ; Normal compilation ;
+; HDL message level                                                ; Level2              ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                 ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000                ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000                ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                 ; 100                ;
+; Clock MUX Protection                                             ; On                  ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                 ; Off                ;
+; Block Design Naming                                              ; Auto                ; Auto               ;
+; SDC constraint protection                                        ; Off                 ; Off                ;
+; Synthesis Effort                                                 ; Auto                ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                  ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                 ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium              ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto                ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                  ; On                 ;
++------------------------------------------------------------------+---------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------+---------+
+; FA.bdf                           ; yes             ; User Block Diagram/Schematic File        ; C:/work/Exp_four/FA.bdf                            ;         ;
+; selector.bdf                     ; yes             ; User Block Diagram/Schematic File        ; C:/work/Exp_four/selector.bdf                      ;         ;
+; ALU.bdf                          ; yes             ; User Block Diagram/Schematic File        ; C:/work/Exp_four/ALU.bdf                           ;         ;
+; ALU_interface.bdf                ; yes             ; User Block Diagram/Schematic File        ; C:/work/Exp_four/ALU_interface.bdf                 ;         ;
+; ALU_expLogicCircuit.bdf          ; yes             ; User Block Diagram/Schematic File        ; C:/work/Exp_four/ALU_expLogicCircuit.bdf           ;         ;
+; sixteen_bit_to_sevenSEG_LED.bdf  ; yes             ; User Block Diagram/Schematic File        ; C:/work/Exp_four/sixteen_bit_to_sevenSEG_LED.bdf   ;         ;
+; chatter.vhd                      ; yes             ; Auto-Found VHDL File                     ; c:/work/exp_four/chatter/chatter.vhd               ;         ;
+; regsixteen.v                     ; yes             ; Auto-Found Verilog HDL File              ; c:/work/exp_four/sixteen_bit_register/regsixteen.v ;         ;
+; 7segled.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; c:/work/exp_four/7seg/quartus_work/7segled.bdf     ;         ;
+; ex1_1.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; c:/work/exp_four/7seg/quartus_work/ex1_1.bdf       ;         ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 161        ;
+;                                             ;            ;
+; Total combinational functions               ; 157        ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 98         ;
+;     -- 3 input functions                    ; 22         ;
+;     -- <=2 input functions                  ; 37         ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 142        ;
+;     -- arithmetic mode                      ; 15         ;
+;                                             ;            ;
+; Total registers                             ; 36         ;
+;     -- Dedicated logic registers            ; 36         ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 107        ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; y_in~input ;
+; Maximum fan-out                             ; 24         ;
+; Total fan-out                               ; 828        ;
+; Average fan-out                             ; 2.03       ;
++---------------------------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                              ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Entity Name                 ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+-----------------------------+--------------+
+; |ALU_expLogicCircuit                   ; 157 (0)             ; 36 (0)                    ; 0           ; 0            ; 0       ; 0         ; 107  ; 0            ; |ALU_expLogicCircuit                                                            ; ALU_expLogicCircuit         ; work         ;
+;    |ALU_interface:inst11|              ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11                                       ; ALU_interface               ; work         ;
+;       |ALU:inst|                       ; 73 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst                              ; ALU                         ; work         ;
+;          |FA:inst10|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst10                    ; FA                          ; work         ;
+;          |FA:inst12|                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst12                    ; FA                          ; work         ;
+;          |FA:inst13|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst13                    ; FA                          ; work         ;
+;          |FA:inst14|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst14                    ; FA                          ; work         ;
+;          |FA:inst15|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst15                    ; FA                          ; work         ;
+;          |FA:inst17|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst17                    ; FA                          ; work         ;
+;          |FA:inst4|                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst4                     ; FA                          ; work         ;
+;          |FA:inst5|                    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst5                     ; FA                          ; work         ;
+;          |FA:inst6|                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst6                     ; FA                          ; work         ;
+;          |FA:inst77|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst77                    ; FA                          ; work         ;
+;          |FA:inst8|                    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst8                     ; FA                          ; work         ;
+;          |FA:inst|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|FA:inst                      ; FA                          ; work         ;
+;          |selector:inst67|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst67              ; selector                    ; work         ;
+;          |selector:inst68|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst68              ; selector                    ; work         ;
+;          |selector:inst70|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst70              ; selector                    ; work         ;
+;          |selector:inst71|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst71              ; selector                    ; work         ;
+;          |selector:inst72|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst72              ; selector                    ; work         ;
+;          |selector:inst73|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst73              ; selector                    ; work         ;
+;          |selector:inst74|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst74              ; selector                    ; work         ;
+;          |selector:inst75|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst75              ; selector                    ; work         ;
+;          |selector:inst76|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst76              ; selector                    ; work         ;
+;          |selector:inst78|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst78              ; selector                    ; work         ;
+;          |selector:inst79|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst79              ; selector                    ; work         ;
+;          |selector:inst80|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst80              ; selector                    ; work         ;
+;          |selector:inst82|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst82              ; selector                    ; work         ;
+;          |selector:inst83|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst83              ; selector                    ; work         ;
+;          |selector:inst84|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst84              ; selector                    ; work         ;
+;          |selector:inst85|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst85              ; selector                    ; work         ;
+;          |selector:inst86|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst86              ; selector                    ; work         ;
+;          |selector:inst87|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst87              ; selector                    ; work         ;
+;          |selector:inst88|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst88              ; selector                    ; work         ;
+;          |selector:inst89|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst89              ; selector                    ; work         ;
+;          |selector:inst90|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst90              ; selector                    ; work         ;
+;          |selector:inst91|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst91              ; selector                    ; work         ;
+;          |selector:inst92|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst92              ; selector                    ; work         ;
+;          |selector:inst93|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst93              ; selector                    ; work         ;
+;          |selector:inst94|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst94              ; selector                    ; work         ;
+;          |selector:inst95|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst95              ; selector                    ; work         ;
+;          |selector:inst96|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst96              ; selector                    ; work         ;
+;          |selector:inst97|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst97              ; selector                    ; work         ;
+;          |selector:inst98|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst98              ; selector                    ; work         ;
+;          |selector:inst99|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|ALU_interface:inst11|ALU:inst|selector:inst99              ; selector                    ; work         ;
+;    |CHATTER:instaaaa|                  ; 28 (28)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|CHATTER:instaaaa                                           ; CHATTER                     ; work         ;
+;    |regSixteen:insthgjk|               ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|regSixteen:insthgjk                                        ; regSixteen                  ; work         ;
+;    |sixteen_bit_to_sevenSEG_LED:inst4| ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst4                          ; sixteen_bit_to_sevenSEG_LED ; work         ;
+;       |7SEGLED:inst1|                  ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst4|7SEGLED:inst1            ; 7SEGLED                     ; work         ;
+;          |ex1_1:inst|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst4|7SEGLED:inst1|ex1_1:inst ; ex1_1                       ; work         ;
+;       |7SEGLED:inst2|                  ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst4|7SEGLED:inst2            ; 7SEGLED                     ; work         ;
+;          |ex1_1:inst|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst4|7SEGLED:inst2|ex1_1:inst ; ex1_1                       ; work         ;
+;       |7SEGLED:inst3|                  ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst4|7SEGLED:inst3            ; 7SEGLED                     ; work         ;
+;          |ex1_1:inst|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst4|7SEGLED:inst3|ex1_1:inst ; ex1_1                       ; work         ;
+;       |7SEGLED:inst|                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst4|7SEGLED:inst             ; 7SEGLED                     ; work         ;
+;          |ex1_1:inst|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst4|7SEGLED:inst|ex1_1:inst  ; ex1_1                       ; work         ;
+;    |sixteen_bit_to_sevenSEG_LED:inst5| ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst5                          ; sixteen_bit_to_sevenSEG_LED ; work         ;
+;       |7SEGLED:inst1|                  ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst5|7SEGLED:inst1            ; 7SEGLED                     ; work         ;
+;          |ex1_1:inst|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst5|7SEGLED:inst1|ex1_1:inst ; ex1_1                       ; work         ;
+;       |7SEGLED:inst2|                  ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst5|7SEGLED:inst2            ; 7SEGLED                     ; work         ;
+;          |ex1_1:inst|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst5|7SEGLED:inst2|ex1_1:inst ; ex1_1                       ; work         ;
+;       |7SEGLED:inst3|                  ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst5|7SEGLED:inst3            ; 7SEGLED                     ; work         ;
+;          |ex1_1:inst|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst5|7SEGLED:inst3|ex1_1:inst ; ex1_1                       ; work         ;
+;       |7SEGLED:inst|                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst5|7SEGLED:inst             ; 7SEGLED                     ; work         ;
+;          |ex1_1:inst|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU_expLogicCircuit|sixteen_bit_to_sevenSEG_LED:inst5|7SEGLED:inst|ex1_1:inst  ; ex1_1                       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+-----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 36    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 107                         ;
+; cycloneiii_ff         ; 36                          ;
+;     ENA               ; 4                           ;
+;     ENA CLR           ; 16                          ;
+;     plain             ; 16                          ;
+; cycloneiii_lcell_comb ; 235                         ;
+;     arith             ; 15                          ;
+;         2 data inputs ; 15                          ;
+;     normal            ; 220                         ;
+;         1 data inputs ; 79                          ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 98                          ;
+;                       ;                             ;
+; Max LUT depth         ; 23.00                       ;
+; Average LUT depth     ; 9.41                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+    Info: Processing started: Thu Nov 06 17:17:18 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file fa.bdf
+    Info (12023): Found entity 1: FA
+Info (12021): Found 1 design units, including 1 entities, in source file sixteenbitfa.bdf
+    Info (12023): Found entity 1: sixteenBitFA
+Info (12021): Found 1 design units, including 1 entities, in source file selector.bdf
+    Info (12023): Found entity 1: selector
+Info (12021): Found 1 design units, including 1 entities, in source file alu.bdf
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file alu_interface.bdf
+    Info (12023): Found entity 1: ALU_interface
+Info (12021): Found 1 design units, including 1 entities, in source file is_overflow.bdf
+    Info (12023): Found entity 1: is_overflow
+Info (12021): Found 1 design units, including 1 entities, in source file sixteen_bit_register_am.bdf
+    Info (12023): Found entity 1: sixteen_bit_register_AM
+Info (12021): Found 1 design units, including 1 entities, in source file alu_explogiccircuit.bdf
+    Info (12023): Found entity 1: ALU_expLogicCircuit
+Info (12021): Found 1 design units, including 1 entities, in source file sixteen_bit_to_sevenseg_led.bdf
+    Info (12023): Found entity 1: sixteen_bit_to_sevenSEG_LED
+Info (12021): Found 1 design units, including 1 entities, in source file second_output.bdf
+    Info (12023): Found entity 1: second_output
+Info (12127): Elaborating entity "ALU_expLogicCircuit" for the top level hierarchy
+Warning (12125): Using design file chatter/chatter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: CHATTER-RTL File: c:/work/exp_four/chatter/chatter.vhd Line: 9
+    Info (12023): Found entity 1: CHATTER File: c:/work/exp_four/chatter/chatter.vhd Line: 4
+Info (12128): Elaborating entity "CHATTER" for hierarchy "CHATTER:instaaaa"
+Info (12128): Elaborating entity "ALU_interface" for hierarchy "ALU_interface:inst11"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU_interface:inst11|ALU:inst"
+Warning (275011): Block or symbol "XOR" of instance "inst58" overlaps another block or symbol
+Warning (275011): Block or symbol "XOR" of instance "inst59" overlaps another block or symbol
+Warning (275011): Block or symbol "XOR" of instance "inst60" overlaps another block or symbol
+Warning (275011): Block or symbol "XOR" of instance "inst61" overlaps another block or symbol
+Warning (275011): Block or symbol "XOR" of instance "inst62" overlaps another block or symbol
+Warning (275011): Block or symbol "XOR" of instance "inst63" overlaps another block or symbol
+Warning (275011): Block or symbol "XOR" of instance "inst64" overlaps another block or symbol
+Info (12128): Elaborating entity "selector" for hierarchy "ALU_interface:inst11|ALU:inst|selector:inst99"
+Info (12128): Elaborating entity "FA" for hierarchy "ALU_interface:inst11|ALU:inst|FA:inst10"
+Warning (12125): Using design file sixteen_bit_register/regsixteen.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: regSixteen File: c:/work/exp_four/sixteen_bit_register/regsixteen.v Line: 1
+Info (12128): Elaborating entity "regSixteen" for hierarchy "regSixteen:insthgjk"
+Info (12128): Elaborating entity "sixteen_bit_to_sevenSEG_LED" for hierarchy "sixteen_bit_to_sevenSEG_LED:inst5"
+Warning (12125): Using design file 7seg/quartus_work/7segled.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 7SEGLED
+Info (12128): Elaborating entity "7SEGLED" for hierarchy "sixteen_bit_to_sevenSEG_LED:inst5|7SEGLED:inst3"
+Warning (12125): Using design file 7seg/quartus_work/ex1_1.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ex1_1
+Info (12128): Elaborating entity "ex1_1" for hierarchy "sixteen_bit_to_sevenSEG_LED:inst5|7SEGLED:inst3|ex1_1:inst"
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/work/Exp_four/output_files/ALU.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 284 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 25 input pins
+    Info (21059): Implemented 82 output pins
+    Info (21061): Implemented 177 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Thu Nov 06 17:17:31 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/work/Exp_four/output_files/ALU.map.smsg.
+
+

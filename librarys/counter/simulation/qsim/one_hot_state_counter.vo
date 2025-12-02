@@ -1,0 +1,450 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition"
+
+// DATE "10/31/2025 06:03:21"
+
+// 
+// Device: Altera EP4CE115F29C7 Package FBGA780
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module one_hot_state_counter (
+	Q3_cur,
+	CLR,
+	CLK,
+	Q2_cur,
+	Q1_cur,
+	Q0_cur,
+	Q3_next,
+	Q2_next,
+	Q1_next,
+	Q0_next);
+output 	Q3_cur;
+input 	CLR;
+input 	CLK;
+output 	Q2_cur;
+output 	Q1_cur;
+output 	Q0_cur;
+output 	Q3_next;
+output 	Q2_next;
+output 	Q1_next;
+output 	Q0_next;
+
+// Design Ports Information
+// Q3_cur	=>  Location: PIN_AD4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Q2_cur	=>  Location: PIN_AD5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Q1_cur	=>  Location: PIN_AC5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Q0_cur	=>  Location: PIN_AB5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Q3_next	=>  Location: PIN_AF4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Q2_next	=>  Location: PIN_AC4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Q1_next	=>  Location: PIN_AB6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Q0_next	=>  Location: PIN_AE6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CLK	=>  Location: PIN_J1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CLR	=>  Location: PIN_Y2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \Q3_cur~output_o ;
+wire \Q2_cur~output_o ;
+wire \Q1_cur~output_o ;
+wire \Q0_cur~output_o ;
+wire \Q3_next~output_o ;
+wire \Q2_next~output_o ;
+wire \Q1_next~output_o ;
+wire \Q0_next~output_o ;
+wire \CLK~input_o ;
+wire \CLK~inputclkctrl_outclk ;
+wire \JKFF0~0_combout ;
+wire \CLR~input_o ;
+wire \CLR~inputclkctrl_outclk ;
+wire \JKFF0~q ;
+wire \JKFF1~0_combout ;
+wire \JKFF1~q ;
+wire \JKFF2~0_combout ;
+wire \JKFF2~q ;
+wire \JKFF3~0_combout ;
+wire \JKFF3~q ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: IOOBUF_X1_Y0_N9
+cycloneive_io_obuf \Q3_cur~output (
+	.i(\JKFF3~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Q3_cur~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Q3_cur~output .bus_hold = "false";
+defparam \Q3_cur~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X1_Y0_N23
+cycloneive_io_obuf \Q2_cur~output (
+	.i(\JKFF2~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Q2_cur~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Q2_cur~output .bus_hold = "false";
+defparam \Q2_cur~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y5_N16
+cycloneive_io_obuf \Q1_cur~output (
+	.i(\JKFF1~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Q1_cur~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Q1_cur~output .bus_hold = "false";
+defparam \Q1_cur~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y4_N23
+cycloneive_io_obuf \Q0_cur~output (
+	.i(!\JKFF0~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Q0_cur~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Q0_cur~output .bus_hold = "false";
+defparam \Q0_cur~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X1_Y0_N2
+cycloneive_io_obuf \Q3_next~output (
+	.i(\JKFF2~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Q3_next~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Q3_next~output .bus_hold = "false";
+defparam \Q3_next~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y4_N2
+cycloneive_io_obuf \Q2_next~output (
+	.i(\JKFF1~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Q2_next~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Q2_next~output .bus_hold = "false";
+defparam \Q2_next~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y4_N9
+cycloneive_io_obuf \Q1_next~output (
+	.i(!\JKFF0~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Q1_next~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Q1_next~output .bus_hold = "false";
+defparam \Q1_next~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X1_Y0_N16
+cycloneive_io_obuf \Q0_next~output (
+	.i(\JKFF3~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Q0_next~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Q0_next~output .bus_hold = "false";
+defparam \Q0_next~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y36_N8
+cycloneive_io_ibuf \CLK~input (
+	.i(CLK),
+	.ibar(gnd),
+	.o(\CLK~input_o ));
+// synopsys translate_off
+defparam \CLK~input .bus_hold = "false";
+defparam \CLK~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G2
+cycloneive_clkctrl \CLK~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\CLK~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\CLK~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \CLK~inputclkctrl .clock_type = "global clock";
+defparam \CLK~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y4_N6
+cycloneive_lcell_comb \JKFF0~0 (
+// Equation(s):
+// \JKFF0~0_combout  = (!\JKFF3~q ) # (!\JKFF0~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\JKFF0~q ),
+	.datad(\JKFF3~q ),
+	.cin(gnd),
+	.combout(\JKFF0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \JKFF0~0 .lut_mask = 16'h0FFF;
+defparam \JKFF0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y36_N15
+cycloneive_io_ibuf \CLR~input (
+	.i(CLR),
+	.ibar(gnd),
+	.o(\CLR~input_o ));
+// synopsys translate_off
+defparam \CLR~input .bus_hold = "false";
+defparam \CLR~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G4
+cycloneive_clkctrl \CLR~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\CLR~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\CLR~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \CLR~inputclkctrl .clock_type = "global clock";
+defparam \CLR~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: FF_X1_Y4_N7
+dffeas JKFF0(
+	.clk(\CLK~inputclkctrl_outclk ),
+	.d(\JKFF0~0_combout ),
+	.asdata(vcc),
+	.clrn(\CLR~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\JKFF0~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam JKFF0.is_wysiwyg = "true";
+defparam JKFF0.power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y4_N0
+cycloneive_lcell_comb \JKFF1~0 (
+// Equation(s):
+// \JKFF1~0_combout  = (!\JKFF1~q  & !\JKFF0~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\JKFF1~q ),
+	.datad(\JKFF0~q ),
+	.cin(gnd),
+	.combout(\JKFF1~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \JKFF1~0 .lut_mask = 16'h000F;
+defparam \JKFF1~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y4_N1
+dffeas JKFF1(
+	.clk(\CLK~inputclkctrl_outclk ),
+	.d(\JKFF1~0_combout ),
+	.asdata(vcc),
+	.clrn(\CLR~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\JKFF1~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam JKFF1.is_wysiwyg = "true";
+defparam JKFF1.power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y4_N18
+cycloneive_lcell_comb \JKFF2~0 (
+// Equation(s):
+// \JKFF2~0_combout  = (!\JKFF2~q  & \JKFF1~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\JKFF2~q ),
+	.datad(\JKFF1~q ),
+	.cin(gnd),
+	.combout(\JKFF2~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \JKFF2~0 .lut_mask = 16'h0F00;
+defparam \JKFF2~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y4_N19
+dffeas JKFF2(
+	.clk(\CLK~inputclkctrl_outclk ),
+	.d(\JKFF2~0_combout ),
+	.asdata(vcc),
+	.clrn(\CLR~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\JKFF2~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam JKFF2.is_wysiwyg = "true";
+defparam JKFF2.power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y4_N28
+cycloneive_lcell_comb \JKFF3~0 (
+// Equation(s):
+// \JKFF3~0_combout  = (!\JKFF3~q  & \JKFF2~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\JKFF3~q ),
+	.datad(\JKFF2~q ),
+	.cin(gnd),
+	.combout(\JKFF3~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \JKFF3~0 .lut_mask = 16'h0F00;
+defparam \JKFF3~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y4_N29
+dffeas JKFF3(
+	.clk(\CLK~inputclkctrl_outclk ),
+	.d(\JKFF3~0_combout ),
+	.asdata(vcc),
+	.clrn(\CLR~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\JKFF3~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam JKFF3.is_wysiwyg = "true";
+defparam JKFF3.power_up = "low";
+// synopsys translate_on
+
+assign Q3_cur = \Q3_cur~output_o ;
+
+assign Q2_cur = \Q2_cur~output_o ;
+
+assign Q1_cur = \Q1_cur~output_o ;
+
+assign Q0_cur = \Q0_cur~output_o ;
+
+assign Q3_next = \Q3_next~output_o ;
+
+assign Q2_next = \Q2_next~output_o ;
+
+assign Q1_next = \Q1_next~output_o ;
+
+assign Q0_next = \Q0_next~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_F4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_E2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_P3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_N7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_P28,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_ASDO_DATA1~~padout ;
+wire \~ALTERA_FLASH_nCE_nCSO~~padout ;
+wire \~ALTERA_DATA0~~padout ;
+wire \~ALTERA_ASDO_DATA1~~ibuf_o ;
+wire \~ALTERA_FLASH_nCE_nCSO~~ibuf_o ;
+wire \~ALTERA_DATA0~~ibuf_o ;
+
+
+endmodule

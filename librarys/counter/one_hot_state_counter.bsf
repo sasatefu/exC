@@ -1,0 +1,100 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 280 408)
+	(text "one_hot_state_counter" (rect 5 0 139 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 171 24 188)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 23 19)(font "Intel Clear" (font_size 8)))
+		(text "CLK" (rect 21 27 44 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "CLR" (rect 0 0 23 19)(font "Intel Clear" (font_size 8)))
+		(text "CLR" (rect 21 99 44 118)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 104)(pt 16 104))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "Q3_cur" (rect 88 0 130 19)(font "Intel Clear" (font_size 8)))
+		(text "Q3_cur" (rect 153 27 195 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 32)(pt 200 32))
+	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "Q2_cur" (rect 88 0 130 19)(font "Intel Clear" (font_size 8)))
+		(text "Q2_cur" (rect 153 59 195 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 64)(pt 200 64))
+	)
+	(port
+		(pt 216 104)
+		(output)
+		(text "Q1_cur" (rect 88 0 130 19)(font "Intel Clear" (font_size 8)))
+		(text "Q1_cur" (rect 153 99 195 118)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 104)(pt 200 104))
+	)
+	(port
+		(pt 216 144)
+		(output)
+		(text "Q0_cur" (rect 88 0 130 19)(font "Intel Clear" (font_size 8)))
+		(text "Q0_cur" (rect 153 139 195 158)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 144)(pt 200 144))
+	)
+	(port
+		(pt 216 184)
+		(output)
+		(text "Q3_next" (rect 88 0 137 19)(font "Intel Clear" (font_size 8)))
+		(text "Q3_next" (rect 146 179 195 198)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 184)(pt 200 184))
+	)
+	(port
+		(pt 216 224)
+		(output)
+		(text "Q2_next" (rect 88 0 137 19)(font "Intel Clear" (font_size 8)))
+		(text "Q2_next" (rect 146 219 195 238)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 224)(pt 200 224))
+	)
+	(port
+		(pt 216 264)
+		(output)
+		(text "Q1_next" (rect 88 0 137 19)(font "Intel Clear" (font_size 8)))
+		(text "Q1_next" (rect 146 259 195 278)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 264)(pt 200 264))
+	)
+	(port
+		(pt 216 304)
+		(output)
+		(text "Q0_next" (rect 88 0 137 19)(font "Intel Clear" (font_size 8)))
+		(text "Q0_next" (rect 146 299 195 318)(font "Intel Clear" (font_size 8)))
+		(line (pt 216 304)(pt 200 304))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 320))
+	)
+)
