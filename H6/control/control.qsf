@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY control
+set_global_assignment -name TOP_LEVEL_ENTITY control_module
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "20.1.1 SP1.02I"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:39:17  DECEMBER 01, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 SP1.02i Lite Edition"
@@ -72,42 +72,53 @@ set_global_assignment -name BDF_FILE counter.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE counter.vwf
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name SEARCH_PATH "c:\\exc\\librarys\\alu\\chatter"
-set_global_assignment -name SEARCH_PATH "c:\\exc\\librarys"
-set_location_assignment PIN_H15 -to A_RW
+set_location_assignment PIN_E19 -to A_RW
 set_location_assignment PIN_G15 -to ALU[4]
 set_location_assignment PIN_F15 -to ALU[3]
 set_location_assignment PIN_H17 -to ALU[2]
 set_location_assignment PIN_J16 -to ALU[1]
 set_location_assignment PIN_H16 -to ALU[0]
-set_location_assignment PIN_F21 -to AND1_out
-set_location_assignment PIN_E19 -to AND2_out
-set_location_assignment PIN_R24 -to CLK
-set_location_assignment PIN_Y2 -to CLOCK_50
-set_location_assignment PIN_F19 -to IsMul
-set_location_assignment PIN_G19 -to MUX
-set_location_assignment PIN_E21 -to Q0
-set_location_assignment PIN_E22 -to Q1
-set_location_assignment PIN_E25 -to Q2
-set_location_assignment PIN_E24 -to Q3
-set_location_assignment PIN_AD27 -to Q_LSB
-set_location_assignment PIN_G16 -to Q_RW
+set_location_assignment PIN_H15 -to AND1_out
+set_location_assignment PIN_G16 -to AND2_out
+set_location_assignment PIN_G19 -to IsMul
+set_location_assignment PIN_J15 -to MUX
+set_location_assignment PIN_AB22 -to Q_LSB
+set_location_assignment PIN_F19 -to Q_RW
 set_location_assignment PIN_N21 -to Reset
-set_location_assignment PIN_J15 -to SF[6]
-set_location_assignment PIN_G17 -to SF[5]
-set_location_assignment PIN_J17 -to SF[4]
-set_location_assignment PIN_H19 -to SF[3]
-set_location_assignment PIN_J19 -to SF[2]
-set_location_assignment PIN_E18 -to SF[1]
-set_location_assignment PIN_F18 -to SF[0]
-set_location_assignment PIN_AB28 -to SW1
-set_location_assignment PIN_AC28 -to SW2
-set_location_assignment PIN_AC27 -to SW3
+set_location_assignment PIN_G17 -to SF[6]
+set_location_assignment PIN_J17 -to SF[5]
+set_location_assignment PIN_H19 -to SF[4]
+set_location_assignment PIN_J19 -to SF[3]
+set_location_assignment PIN_E18 -to SF[2]
+set_location_assignment PIN_F18 -to SF[1]
+set_location_assignment PIN_F21 -to SF[0]
+set_location_assignment PIN_Y17 -to SW1
+set_location_assignment PIN_AB21 -to SW2
+set_location_assignment PIN_AC15 -to SW3
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE multiTset.vwf
+set_global_assignment -name BDF_FILE control_module.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE multiTset.vwf
+set_global_assignment -name SEARCH_PATH "c:\\exc\\librarys\\alu\\7seg\\quartus_work"
+set_global_assignment -name SEARCH_PATH "c:\\exc\\librarys\\alu\\chatter"
+set_global_assignment -name SEARCH_PATH "c:\\exc\\librarys"
+set_location_assignment PIN_Y2 -to CLK_50
+set_location_assignment PIN_G22 -to CLK_out
+set_location_assignment PIN_R24 -to CLK_SW
+set_location_assignment PIN_E24 -to Q_LSB_out
+set_location_assignment PIN_H21 -to Reset_out
+set_location_assignment PIN_E21 -to SW1_out
+set_location_assignment PIN_E22 -to SW2_out
+set_location_assignment PIN_E25 -to SW3_out
+set_location_assignment PIN_AD25 -to five
+set_location_assignment PIN_AF22 -to four
+set_location_assignment PIN_AF21 -to one
+set_location_assignment PIN_AG25 -to six
+set_location_assignment PIN_AE22 -to two
+set_location_assignment PIN_AF25 -to zero
+set_location_assignment PIN_AD22 -to three
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

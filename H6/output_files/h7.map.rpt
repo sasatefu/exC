@@ -1,5 +1,5 @@
 Analysis & Synthesis report for h7
-Tue Dec 02 13:43:59 2025
+Wed Dec 03 10:52:31 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -37,10 +37,10 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Dec 02 13:43:59 2025                         ;
+; Analysis & Synthesis Status        ; Failed - Wed Dec 03 10:52:31 2025                         ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; h7                                                        ;
-; Top-level Entity Name              ; control                                                   ;
+; Top-level Entity Name              ; control_module                                            ;
 ; Family                             ; Cyclone IV E                                              ;
 ; Total logic elements               ; N/A until Partition Merge                                 ;
 ;     Total combinational functions  ; N/A until Partition Merge                                 ;
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; control            ; h7                 ;
+; Top-level entity name                                            ; control_module     ; h7                 ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -162,21 +162,39 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Tue Dec 02 13:43:51 2025
+    Info: Processing started: Wed Dec 03 10:52:24 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off h7 -c h7
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file control/control.bdf
     Info (12023): Found entity 1: control
-Info (12021): Found 1 design units, including 1 entities, in source file counter.bdf
-    Info (12023): Found entity 1: counter
-Info (12127): Elaborating entity "control" for the top level hierarchy
+Warning (12019): Can't analyze file -- file counter.bdf is missing
+Info (12021): Found 1 design units, including 1 entities, in source file control/control_module.bdf
+    Info (12023): Found entity 1: control_module
+Info (12127): Elaborating entity "control_module" for the top level hierarchy
+Warning (275011): Block or symbol "NOT" of instance "inst2" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst6" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst8" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst10" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst12" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst14" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst16" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst18" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst28" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst30" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst19" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst21" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst23" overlaps another block or symbol
+Info (12128): Elaborating entity "control" for hierarchy "control:inst"
 Error (12006): Node instance "ismul_inst" instantiates undefined entity "contorol_IsMul". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP.
-Error (12006): Node instance "out_inst" instantiates undefined entity "out". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP.
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+Error (12006): Node instance "inst5" instantiates undefined entity "out". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP.
+Error (12006): Node instance "inst" instantiates undefined entity "counter". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP.
+Error (12006): Node instance "inst24" instantiates undefined entity "CHATTER". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP.
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 16 warnings
     Error: Peak virtual memory: 4710 megabytes
-    Error: Processing ended: Tue Dec 02 13:43:59 2025
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:17
+    Error: Processing ended: Wed Dec 03 10:52:31 2025
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:16
 
 

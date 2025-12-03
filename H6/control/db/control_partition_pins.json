@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "IsMul",
-					"strict" : false
-				},
-				{
 					"name" : "AND1_out",
 					"strict" : false
 				},
@@ -28,19 +24,59 @@
 					"strict" : false
 				},
 				{
-					"name" : "Q3",
+					"name" : "IsMul",
 					"strict" : false
 				},
 				{
-					"name" : "Q2",
+					"name" : "Q_LSB_out",
 					"strict" : false
 				},
 				{
-					"name" : "Q1",
+					"name" : "SW3_out",
 					"strict" : false
 				},
 				{
-					"name" : "Q0",
+					"name" : "SW2_out",
+					"strict" : false
+				},
+				{
+					"name" : "SW1_out",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_out",
+					"strict" : false
+				},
+				{
+					"name" : "Reset_out",
+					"strict" : false
+				},
+				{
+					"name" : "six",
+					"strict" : false
+				},
+				{
+					"name" : "five",
+					"strict" : false
+				},
+				{
+					"name" : "four",
+					"strict" : false
+				},
+				{
+					"name" : "three",
+					"strict" : false
+				},
+				{
+					"name" : "two",
+					"strict" : false
+				},
+				{
+					"name" : "one",
+					"strict" : false
+				},
+				{
+					"name" : "zero",
 					"strict" : false
 				},
 				{
@@ -52,7 +88,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW1",
+					"name" : "Q_LSB",
 					"strict" : false
 				},
 				{
@@ -64,15 +100,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "Q_LSB",
-					"strict" : false
-				},
-				{
-					"name" : "CLK",
+					"name" : "SW1",
 					"strict" : false
 				},
 				{
 					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_50",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_SW",
 					"strict" : false
 				}
 			]

@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Failed - Tue Dec 02 13:43:59 2025
+Analysis & Synthesis Status : Failed - Wed Dec 03 10:52:31 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : h7
-Top-level Entity Name : control
+Top-level Entity Name : control_module
 Family : Cyclone IV E
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge
